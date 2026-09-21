@@ -76,7 +76,7 @@ def main():
         for p in sorted((ROOT/directory).glob(pattern)):
             copy(p, github/p.relative_to(ROOT))
     for name in ('aml_nextstep/__init__.py', 'README.md', 'ARCHITECTURE.md', 'LICENSE', 'DATA_LICENSE.txt', 'NOTICE', 'requirements-test.txt',
-                 'docs/DATASET_CARD.md', 'docs/MODEL_CARD.md', 'docs/REPRODUCIBILITY.md', 'docs/RELEASE_PLAN.md', 'docs/LAUNCH_COPY.md', 'docs/PORTFOLIO.md', 'docs/EXPERIMENTS.md',
+                 'docs/DATASET_CARD.md', 'docs/MODEL_CARD.md', 'docs/REPRODUCIBILITY.md', 'docs/RELEASE_PLAN.md', 'docs/RELEASE_STATUS.md', 'docs/LAUNCH_COPY.md', 'docs/PORTFOLIO.md', 'docs/EXPERIMENTS.md',
                  'demo/safr-gate.template.html', 'demo/safr-harness.template.html', 'vendor/laya-0.3.4-py3-none-any.whl'):
         copy(ROOT/name, github/name)
     # Mirror ready-to-open demos without putting unrelated artifacts in Git.
@@ -138,13 +138,13 @@ def main():
                  'licenses':[{'name':'CC-BY-4.0'}], 'keywords':['finance','nlp','classification']}
     (kgdata/'dataset-metadata.json').write_text(json.dumps(data_meta,indent=2)+'\n')
     model_meta = {'ownerSlug':'sivasub987','title':'Mandate-1 Laya','slug':'mandate-1-laya','isPrivate':False,
-                  'subtitle':'Experimental shadow-only SAFR semantic classifier',
+                  'subtitle':'SAFR agentic-finance research: typed text classification with a 421M Laya fine-tune',
                   'description': (ROOT/'docs/MODEL_CARD.md').read_text().split('---',2)[-1].strip(),
                   'provenanceSources':'https://huggingface.co/convaiinnovations/laya-typed-decisions'}
     (kgmodel/'model-metadata.json').write_text(json.dumps(model_meta,indent=2)+'\n')
     instance = {'ownerSlug':'sivasub987','modelSlug':'mandate-1-laya','instanceSlug':'research-v02','framework':'pyTorch',
                 'overview':'Teacher-distilled 421M Laya checkpoint. Synthetic research only; failed model-use gates disclosed.',
-                'usage':model_meta['description'],'licenseName':'Apache 2.0','fineTunable':True,
+                'usage':model_meta['description'],'licenseName':'Apache 2.0','fineTunable':True,'modelInstanceType':'externalVariant',
                 'trainingData':['https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data'],
                 'externalBaseModelUrl':'https://huggingface.co/convaiinnovations/laya-typed-decisions'}
     (kginstance/'model-instance-metadata.json').write_text(json.dumps(instance,indent=2)+'\n')

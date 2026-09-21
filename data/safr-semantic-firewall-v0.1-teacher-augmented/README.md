@@ -55,7 +55,7 @@ configs:
 
 **Fictional research data, not transaction data, customer records, or practitioner-reviewed AML ground truth.** These controlled contrasts test semantic relationships in Governance-Envelope-like records: scope, instruction, trace, evidence and reviewed context.
 
-[Code and demo](https://github.com/siva-sub/mandate-1) · [Model](https://huggingface.co/sivasub987/mandate-1-laya) · [Kaggle mirror](https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data)
+[Try the demo](https://siva-sub.github.io/mandate-1/) · [Code](https://github.com/siva-sub/mandate-1) · [Model](https://huggingface.co/sivasub987/mandate-1-laya) · [Kaggle mirror](https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data)
 
 ## Contents and intended use
 

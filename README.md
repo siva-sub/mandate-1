@@ -4,9 +4,7 @@
 
 An AML/CFT investigation assistant can propose a useful next check without receiving permission to execute arbitrary actions. Mandate-1 separates semantic judgement from authority: a model interprets the instruction and evidence; deterministic code owns the final disposition.
 
-**[Try the recorded interactive demo](https://siva-sub.github.io/mandate-1/)** · [Dataset](https://huggingface.co/datasets/sivasub987/mandate-1-safr-data) · [Research checkpoint](https://huggingface.co/sivasub987/mandate-1-laya) · [Kaggle dataset](https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data)
-
-Kaggle dataset is public; the model mirror is pending a credential with model-write permission. The model is available on Hugging Face.
+**[Try the recorded interactive demo](https://siva-sub.github.io/mandate-1/)** · [Dataset](https://huggingface.co/datasets/sivasub987/mandate-1-safr-data) · [Research checkpoint](https://huggingface.co/sivasub987/mandate-1-laya) · [Kaggle dataset](https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data) · [Kaggle model](https://www.kaggle.com/models/sivasub987/mandate-1-laya)
 
 > Experimental, synthetic-data proof of concept. Not an AML detector, bank policy implementation, compliance certification, or MAS-endorsed product. The Laya checkpoint is **shadow-only** and does not power the live reference harness.
 
@@ -16,7 +14,7 @@ I'm **Sivasubramanian Ramanathan (Siva)**, an independent consultant previously 
 
 The distinction is **dangerous actions versus dangerous words**. The goal is not another keyword blocklist: it is to interpret the relationship between the proposal, authority and runtime evidence—without letting a model grant itself permission. This is independent work, not endorsed by a former employer.
 
-[My motivation and portfolio](docs/PORTFOLIO.md) · [All experiments, including failures](docs/EXPERIMENTS.md)
+[My motivation and portfolio](docs/PORTFOLIO.md) · [All experiments, including failures](docs/EXPERIMENTS.md) · [Verified release links and tags](docs/RELEASE_STATUS.md)
 
 ## See the value first
 

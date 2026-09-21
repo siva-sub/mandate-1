@@ -32,7 +32,7 @@ tags:
 
 A 421,293,827-parameter Laya adaptation returning one advisory semantic finding from a fictional governance record. It does not detect money laundering, assess customers, issue regulatory decisions, or grant SAFR execution permission.
 
-[Code and working reference harness](https://github.com/siva-sub/mandate-1) · [Dataset](https://huggingface.co/datasets/sivasub987/mandate-1-safr-data) · Kaggle model mirror: pending model-write access
+[Try the demo](https://siva-sub.github.io/mandate-1/) · [Code and reference harness](https://github.com/siva-sub/mandate-1) · [Dataset](https://huggingface.co/datasets/sivasub987/mandate-1-safr-data) · [Kaggle model](https://www.kaggle.com/models/sivasub987/mandate-1-laya)
 
 ## Role and interface
 
@@ -79,7 +79,14 @@ python scripts/predict_safr_laya.py --repo sivasub987/mandate-1-laya --device cp
 
 This downloads approximately 846 MB and runs one fictional example. Use a suitable CUDA PyTorch installation and `--device cuda:0` for GPU inference. Upstream dependency resolution can change; the exact observed training environment is recorded in `training-receipt.json`. It is not a promise of bitwise retraining reproducibility.
 
-Planned Kaggle variation: `sivasub987/mandate-1-laya/pyTorch/research-v02`. The current credential is denied `models.create` / `models.update`, so this mirror is not yet published. Use the verified Hugging Face checkpoint. The prepared Kaggle bundle retains the nested tokenizer/encoder paths; after Kaggle expands it, the loader directory is `model-bundle/`.
+Kaggle variation: [research-v02, version 1](https://www.kaggle.com/models/sivasub987/mandate-1-laya/PyTorch/research-v02/1). The bundle retains the nested tokenizer/encoder paths; Kaggle expands the uploaded ZIP into `model-bundle/`.
+
+```bash
+kaggle models instances versions download sivasub987/mandate-1-laya/pyTorch/research-v02/1 --untar -p model-download
+python scripts/predict_safr_laya.py --local-model model-download/model-bundle --device cpu
+```
+
+The downloaded Kaggle bundle's SHA-256 checksums have been verified against the published files.
 
 ## Limits and release status
 
