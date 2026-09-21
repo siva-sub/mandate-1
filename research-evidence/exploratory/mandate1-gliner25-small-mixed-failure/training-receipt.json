@@ -1,0 +1,3490 @@
+{
+  "adapter": {
+    "files": [
+      {
+        "bytes": 5176,
+        "path": "README.md",
+        "sha256": "8945221fe4042e3eda0909f50d42eeae5bca59caefcefaeea4aae0cdfb9d871e"
+      },
+      {
+        "bytes": 2417,
+        "path": "adapter_config.json",
+        "sha256": "721254915a19e40bea52ba2eeab408a2699a7dcd4395c0bd6ee5c43f3225ffd9"
+      },
+      {
+        "bytes": 3595624,
+        "path": "adapter_model.safetensors",
+        "sha256": "3898349c1db8a13527e56cf583a64ef5306721666274b7828e1c048933e4c048"
+      }
+    ],
+    "path": "/content/safr-output-mixed/training/best",
+    "sha256": "e4ccf6033be7d2d052746d7baf78bcd00054baed9c500720acf01891ecdfc0d9"
+  },
+  "base": {
+    "parameter_count": 73881879,
+    "repo": "fastino/gliner2.5-small-v1",
+    "revision": "7e6f537f10337497069276892a5ef435028252ce",
+    "weights_bytes": 295567700,
+    "weights_sha256": "4ee982787ace270d4bf15dbcb28ced38e0aa201372347114ceedd6336055de2b"
+  },
+  "before_training": {
+    "dev": {
+      "elapsed_seconds": 4.438050389999717,
+      "examples": 60,
+      "metrics": {
+        "citation_f1": 0.0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0,
+        "contrast_pair_accuracy": 0.0,
+        "exact_set_accuracy": 0.1,
+        "examples": 60,
+        "false_clear_rate": 0.06666666666666667,
+        "false_hold_rate": 0.8333333333333334,
+        "latency_seconds": {
+          "count": 60,
+          "p50": 0.07396750649999527,
+          "p95": 0.07396750649999527
+        },
+        "macro_f1": 0.16032324001963474,
+        "micro_f1": 0.2285714285714286,
+        "micro_precision": 0.2,
+        "micro_recall": 0.26666666666666666,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.2702702702702703,
+            "fn": 25,
+            "fp": 2,
+            "precision": 0.7142857142857143,
+            "recall": 0.16666666666666666,
+            "support": 30,
+            "tp": 5
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.19607843137254902,
+            "fn": 0,
+            "fp": 41,
+            "precision": 0.10869565217391304,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 0.0,
+            "fn": 5,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 5,
+            "tp": 0
+          },
+          "request_missing_evidence": {
+            "f1": 0.32258064516129037,
+            "fn": 0,
+            "fp": 21,
+            "precision": 0.19230769230769232,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 0.0,
+            "fn": 5,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 5,
+            "tp": 0
+          },
+          "route_novel_context": {
+            "f1": 0.0,
+            "fn": 5,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 5,
+            "tp": 0
+          },
+          "route_scope_review": {
+            "f1": 0.33333333333333337,
+            "fn": 4,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 0.2,
+            "support": 5,
+            "tp": 1
+          }
+        },
+        "valid_output_rate": 1.0
+      },
+      "predictions": [
+        {
+          "example_id": "fw-0181-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6127589344978333,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7503225207328796,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6029331088066101,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7227196097373962,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8245517015457153,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5169792771339417,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0181-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5026641488075256,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7523917555809021,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6510933041572571,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7579584121704102,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8404165506362915,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5178427696228027,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0182-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.523472785949707,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5169987678527832,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5871487855911255,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7655567526817322,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7683047652244568,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5588346719741821,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0182-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5591245293617249,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5980949997901917,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5706796646118164,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8195187449455261,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8605819940567017,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5664904117584229,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0183-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6301519870758057,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6768404245376587,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6089505553245544,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7425740361213684,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7925100326538086,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.6358006000518799,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0183-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6515585780143738,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7841841578483582,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.676325798034668,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7744162678718567,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7859163880348206,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5453976392745972,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0184-a",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6114225387573242,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8005783557891846,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5824252963066101,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.712052047252655,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8826090097427368,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5175143480300903,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0184-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6893410682678223,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7951412796974182,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5883969068527222,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7742794156074524,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8743950724601746,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5002750158309937,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0185-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5877576470375061,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7692310214042664,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6256693601608276,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.805962085723877,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8620196580886841,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5370835661888123,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0185-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5725400447845459,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7767741680145264,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.632523238658905,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8098872303962708,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.85750412940979,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5402325391769409,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0186-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5784496068954468,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7591713666915894,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6260812878608704,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.5426169633865356,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7906696200370789,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5032022595405579,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0186-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5380661487579346,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7730429768562317,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6408101320266724,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8751173615455627,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8507129549980164,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.502946138381958,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0187-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.619836151599884,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7611101269721985,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5992379188537598,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7122944593429565,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8103574514389038,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.500855565071106,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0187-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5323821306228638,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7623277902603149,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6535298824310303,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7479797601699829,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.818775475025177,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5079089999198914,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0188-a",
+          "predicted_actions": [
+            "route_scope_review",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5445624589920044,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5006312131881714,
+              "label": "outside mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5735183954238892,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7452346682548523,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7622849345207214,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5528655052185059,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0188-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5928900241851807,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5847917199134827,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5712588429450989,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8025538325309753,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8405647277832031,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5595773458480835,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0189-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6336380243301392,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7051827311515808,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6115977168083191,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7397525906562805,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7995805144309998,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.6157286167144775,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0189-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6564825773239136,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.794668436050415,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.682698667049408,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7631039619445801,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7906877398490906,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5301818251609802,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0190-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6494678854942322,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8068523406982422,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5842885971069336,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7437976598739624,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8922562599182129,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5012059211730957,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0190-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7133177518844604,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7992846965789795,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5958563685417175,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8085269927978516,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8968952298164368,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5246486663818359,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0191-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5404385924339294,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7586556077003479,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6181958317756653,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8054990172386169,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8559648394584656,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5531582236289978,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0191-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5328251719474792,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7738122940063477,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.628215491771698,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.813541829586029,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8475329875946045,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.548546314239502,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0192-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5487511157989502,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.766474187374115,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6167358756065369,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.5554234981536865,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8048418164253235,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5236959457397461,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0192-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5022773146629333,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7850362658500671,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6314811706542969,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.883713960647583,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8525314927101135,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.521380603313446,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0193-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5819504261016846,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7434366345405579,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5954214334487915,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.6990498900413513,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7819682359695435,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5112181901931763,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0193-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5059299468994141,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7511202096939087,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6511746644973755,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7411310076713562,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7955110669136047,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5229278206825256,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0194-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.518792986869812,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5202822089195251,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5902368426322937,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7516598105430603,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7749873399734497,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5538188815116882,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0194-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5586373209953308,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.597125768661499,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5788711905479431,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8063725233078003,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8575120568275452,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5619630813598633,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0195-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6060519218444824,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6977590322494507,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6225773692131042,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7498410940170288,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.817741334438324,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.6354374289512634,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0195-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6337610483169556,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7843726873397827,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6923800706863403,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7798614501953125,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8186189532279968,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5448288917541504,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0196-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.610877275466919,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8076433539390564,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5756890177726746,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7335825562477112,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8709608316421509,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5068488121032715,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0196-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6776207685470581,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7955353260040283,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5856114029884338,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8038857579231262,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.865574300289154,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5272666215896606,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0197-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5722984075546265,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7689829468727112,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6168315410614014,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8050174117088318,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8495721220970154,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5280134677886963,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0197-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5659583210945129,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7831307053565979,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6263443231582642,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8153677582740784,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8442626595497131,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5244035124778748,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0198-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5154154300689697,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7509217262268066,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.624403715133667,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.5347400307655334,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7906489372253418,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5040838122367859,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0198-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5428786277770996,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7751682996749878,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6368958950042725,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8720718026161194,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8345704674720764,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5018842816352844,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0199-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.636099100112915,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.757693350315094,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6066610217094421,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7050840854644775,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7926921248435974,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5152928233146667,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0199-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5296549201011658,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.757912814617157,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6586840152740479,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.747610330581665,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7972241640090942,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.528189480304718,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0200-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5253562331199646,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5224958658218384,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6112233400344849,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7647952437400818,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8025239109992981,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5630172491073608,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0200-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5656850934028625,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5811595320701599,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5950409770011902,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8186697959899902,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8834078907966614,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5683649778366089,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0201-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6375362873077393,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6966040730476379,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6103144288063049,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7674274444580078,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8133299946784973,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.639004647731781,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0201-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6642717123031616,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7838078141212463,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6856909990310669,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7868619561195374,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8259506225585938,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5489382743835449,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0202-a",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6227205395698547,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8047534227371216,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5660811066627502,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7343189120292664,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8677719235420227,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5242001414299011,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0202-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7124955654144287,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7983691692352295,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5842863321304321,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8017791509628296,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8708584308624268,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5176379680633545,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0203-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5989090800285339,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7663455009460449,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6202263236045837,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8011503219604492,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8206427097320557,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5387272834777832,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0203-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5763595104217529,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7726902961730957,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6257752180099487,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8062694668769836,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.818176805973053,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5422713160514832,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0204-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5658652782440186,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.76621013879776,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6263014674186707,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.5439803600311279,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7974543571472168,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5070708990097046,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0204-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5229694247245789,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7760363221168518,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6399649381637573,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8725027441978455,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8450468182563782,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.503617525100708,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0205-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5853635668754578,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7483319044113159,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6064846515655518,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7262552380561829,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8216185569763184,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5089853405952454,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0205-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.505348801612854,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7475592494010925,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.657252848148346,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7568464875221252,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8300084471702576,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5174704194068909,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0206-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5025062561035156,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5107458829879761,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6053240895271301,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7566913962364197,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7711332440376282,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5728114247322083,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0206-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5350014567375183,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5913093686103821,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5982044339179993,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8107813596725464,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8606606721878052,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5792800188064575,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0207-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6271224617958069,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7026850581169128,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6106550693511963,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7573986649513245,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7913331985473633,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.622694730758667,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0207-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6451687812805176,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7827701568603516,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6789241433143616,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7768522500991821,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7965905070304871,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5447602272033691,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0208-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6484387516975403,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8014057278633118,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5794913172721863,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.728155791759491,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8759918808937073,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5112078785896301,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0208-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7257704138755798,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7957602739334106,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5869895815849304,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7838388681411743,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8700881600379944,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5074381828308105,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0209-a",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5566957592964172,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.768010675907135,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6283589601516724,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7871730327606201,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8303884863853455,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5397166013717651,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0209-b",
+          "predicted_actions": [
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5473629832267761,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7724467515945435,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6389051675796509,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8035820722579956,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8365086913108826,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5397065877914429,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0210-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5228465795516968,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7528038024902344,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6284157633781433,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.5585042834281921,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.828241229057312,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5103563070297241,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0210-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5078054070472717,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.769332766532898,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.642395555973053,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8818529844284058,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8685265183448792,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.507693886756897,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        }
+      ],
+      "throughput_examples_per_second": 13.51944992224476
+    }
+  },
+  "code": {
+    "gliner2_revision": "d7c727458bf6929bc9ef5ee04e13c3f717a7c455"
+  },
+  "completed_at": "2026-09-21T13:28:21.830752Z",
+  "data": {
+    "dev_validation": {
+      "errors": [],
+      "invalid": 0,
+      "invalid_indices": [],
+      "total": 210,
+      "valid": 210
+    },
+    "manifest": {
+      "examples": {
+        "calibration": 60,
+        "dev": 210,
+        "ood": 60,
+        "test": 120,
+        "train": 1260
+      },
+      "files": {
+        "gliner25/calibration.jsonl": {
+          "bytes": 300687,
+          "sha256": "f0eba9d1598c3a45091b594448b55d538e26ee77096052660fc0dc5ac7339108"
+        },
+        "gliner25/dev.jsonl": {
+          "bytes": 580667,
+          "sha256": "40c17b6e21a27c84cb19099e313c4b73d15b673c08783de68c1ed9b4f690f03c"
+        },
+        "gliner25/ood.jsonl": {
+          "bytes": 298825,
+          "sha256": "3e577d273a96bee379b8504859643a47defb1ea11f6eb6ee5349820be1d064e7"
+        },
+        "gliner25/test.jsonl": {
+          "bytes": 597706,
+          "sha256": "4666b23b5c65c68808858511eb61dc824c8ea7319b9a9f2f31105a12824f7e07"
+        },
+        "gliner25/train.jsonl": {
+          "bytes": 3486522,
+          "sha256": "5411c119c3390f01c8bdbabc06e93b8c09eb9b6387157adc66865e824f06a36a"
+        }
+      },
+      "positive_oversample_factor": 6,
+      "schema": "safr-gliner-semantic-primitives-v1",
+      "source_dataset_schema": "safr-semantic-firewall-contrast-v0.1",
+      "source_examples": {
+        "calibration": 60,
+        "dev": 60,
+        "ood": 60,
+        "test": 120,
+        "train": 360
+      },
+      "source_sha256": {
+        "calibration": "6963dd951c9e31bf6eefeb54e79d25bfbc20cb7e36b505255a3a3df8c9f50257",
+        "dev": "7391252810a5a6e560764914bbf30881874b9ac17ef9b3f18bcd3d3bc9558381",
+        "ood": "d20ccb2807caeee348f1d3fbdb3e81577b9f8ccdb367e9362c0e65e4d88787c3",
+        "test": "715cb4508fec4de58e742dd69d08e72b866eb973587759e33d5d48f487ac1053",
+        "train": "7c498ee626b4b3cfb45096afa6039f00eb4f81f4dff735730083135ef522c493"
+      },
+      "support_entity": "decision support marker",
+      "task_count": 6,
+      "tasks": [
+        {
+          "labels": [
+            "adequate evidence",
+            "insufficient evidence"
+          ],
+          "raise_only_action": "request_missing_evidence",
+          "task": "evidence sufficiency"
+        },
+        {
+          "labels": [
+            "within mandate",
+            "outside mandate"
+          ],
+          "raise_only_action": "route_scope_review",
+          "task": "mandate scope alignment"
+        },
+        {
+          "labels": [
+            "not influencing action",
+            "influencing action"
+          ],
+          "raise_only_action": "quarantine_untrusted_instruction",
+          "task": "untrusted instruction influence"
+        },
+        {
+          "labels": [
+            "trace consistent",
+            "trace contradictory"
+          ],
+          "raise_only_action": "resolve_trace_conflict",
+          "task": "trusted trace consistency"
+        },
+        {
+          "labels": [
+            "instruction aligned",
+            "instruction conflicting"
+          ],
+          "raise_only_action": "request_instruction_clarification",
+          "task": "principal instruction alignment"
+        },
+        {
+          "labels": [
+            "reviewed analogue exists",
+            "no reviewed analogue"
+          ],
+          "raise_only_action": "route_novel_context",
+          "task": "reviewed context novelty"
+        }
+      ],
+      "training_construction": "Exception rows are focused on their isolated primitive and repeated six times; hard-negative rows ask all six tasks together. This yields 180 exception and 180 nominal labels per primitive in train while teaching full-schema nominal co-occurrence.",
+      "warnings": [
+        "Synthetic programmatic labels only; no institutional or human-reviewed ground truth.",
+        "The model predicts semantic primitives, never SAFR's binding disposition.",
+        "Teacher-generated text, if added later, must remain outside fixed test and OOD splits."
+      ]
+    },
+    "manifest_sha256": "874919dd7373e181c2c81c524cf6c6d21e7ad74b4c0b1b79f82ea4184717e4c6",
+    "train_validation": {
+      "errors": [],
+      "invalid": 0,
+      "invalid_indices": [],
+      "total": 1260,
+      "valid": 1260
+    }
+  },
+  "environment": {
+    "cuda": "12.8",
+    "gliner2": "2.0.0",
+    "gpu": "Tesla T4",
+    "peak_cuda_bytes": 3714292224,
+    "peft": "0.20.0",
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6"
+  },
+  "publish_allowed": false,
+  "run_status": "completed_training_pending_independent_evaluation",
+  "schema": "safr-gliner25-small-colab-train-v2",
+  "training": {
+    "config": {
+      "_precision_explicit": true,
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "adam_epsilon": 1e-08,
+      "allow_invalid_samples": false,
+      "allow_tf32": true,
+      "batch_size": 4,
+      "bf16": false,
+      "compile_model": false,
+      "ddp_consensus_check": true,
+      "ddp_find_unused_parameters": false,
+      "ddp_static_graph": true,
+      "debug": false,
+      "debug_global_steps": [],
+      "deterministic": true,
+      "diagnostics_every_n_steps": 0,
+      "dry_run_recall_steps": 0,
+      "early_stopping": true,
+      "early_stopping_patience": 2,
+      "early_stopping_threshold": 0.0,
+      "encoder_lr": 1e-05,
+      "eval_batch_size": 8,
+      "eval_steps": 500,
+      "eval_strategy": "epoch",
+      "experiment_name": "safr-gliner25-small-primitives-lora",
+      "float32_matmul_precision": "high",
+      "fp16": true,
+      "fused_optimizer": true,
+      "gate_long_recall": 0.93,
+      "gate_recall": 0.97,
+      "gold_injection_end": 0.25,
+      "gold_injection_hold_frac": 0.15,
+      "gold_injection_start": 1.0,
+      "gradient_accumulation_steps": 4,
+      "gradient_checkpointing": false,
+      "greater_is_better": false,
+      "group_by_length": true,
+      "ignore_nonfinite_losses": false,
+      "length_group_window_batches": 50,
+      "local_rank": -1,
+      "log_proposal_metrics": true,
+      "logging_first_step": true,
+      "logging_steps": 5,
+      "lora_alpha": 16.0,
+      "lora_dropout": 0.05,
+      "lora_r": 8,
+      "lora_target_modules": [
+        "encoder",
+        "all_task_heads"
+      ],
+      "lora_use_dora": false,
+      "max_eval_samples": -1,
+      "max_grad_norm": 1.0,
+      "max_len": 2048,
+      "max_steps": -1,
+      "max_train_samples": -1,
+      "metric_for_best": "eval_loss",
+      "num_cycles": 0.5,
+      "num_epochs": 4,
+      "num_workers": 2,
+      "on_capacity_exceeded": "raise",
+      "output_dir": "/content/safr-output-mixed/training",
+      "pin_memory": true,
+      "prefetch_factor": 2,
+      "profile_first_n_steps": 0,
+      "report_to_wandb": false,
+      "save_adapter_only": true,
+      "save_best": true,
+      "save_total_limit": 2,
+      "scheduler_type": "cosine",
+      "seed": 94217,
+      "skip_step_errors": false,
+      "strict_training": true,
+      "task_lr": 0.0005,
+      "use_lora": true,
+      "validate_data": true,
+      "wandb_entity": null,
+      "wandb_notes": null,
+      "wandb_project": null,
+      "wandb_run_name": null,
+      "wandb_tags": [],
+      "warmup_ratio": 0.1,
+      "warmup_steps": 0,
+      "weight_decay": 0.01
+    },
+    "elapsed_seconds": 409.8715890210001,
+    "result": {
+      "best_metric": 132.98786290486655,
+      "eval_metrics_history": [
+        {
+          "epoch": 0,
+          "eval_candidates_per_query": 192.0,
+          "eval_classification_loss": 0.5753830914144162,
+          "eval_count_loss": 0.3147146392751623,
+          "eval_end_recall": 1.0,
+          "eval_loss": 157.01764382256403,
+          "eval_proposal_oracle_recall": 1.0,
+          "eval_recall_length_5_8": 1.0,
+          "eval_start_recall": 1.0,
+          "eval_structure_loss": 0.0,
+          "step": 79
+        },
+        {
+          "epoch": 1,
+          "eval_candidates_per_query": 192.0,
+          "eval_classification_loss": 0.5365531996444419,
+          "eval_count_loss": 0.23106118815916557,
+          "eval_end_recall": 1.0,
+          "eval_loss": 134.6556362575955,
+          "eval_proposal_oracle_recall": 1.0,
+          "eval_recall_length_5_8": 1.0,
+          "eval_start_recall": 1.0,
+          "eval_structure_loss": 0.0,
+          "step": 158
+        },
+        {
+          "epoch": 2,
+          "eval_candidates_per_query": 192.0,
+          "eval_classification_loss": 0.46608094926233645,
+          "eval_count_loss": 0.22232044957302236,
+          "eval_end_recall": 1.0,
+          "eval_loss": 135.88824194448966,
+          "eval_proposal_oracle_recall": 1.0,
+          "eval_recall_length_5_8": 1.0,
+          "eval_start_recall": 1.0,
+          "eval_structure_loss": 0.0,
+          "step": 237
+        },
+        {
+          "epoch": 3,
+          "eval_candidates_per_query": 192.0,
+          "eval_classification_loss": 0.42984281866638746,
+          "eval_count_loss": 0.22208290850674664,
+          "eval_end_recall": 1.0,
+          "eval_loss": 132.98786290486655,
+          "eval_proposal_oracle_recall": 1.0,
+          "eval_recall_length_5_8": 1.0,
+          "eval_start_recall": 1.0,
+          "eval_structure_loss": 0.0,
+          "step": 316
+        }
+      ],
+      "samples_per_second": 12.301254667689605,
+      "total_epochs": 4,
+      "total_steps": 316,
+      "total_time_seconds": 409.7143044471741,
+      "train_metrics_history": [
+        {
+          "classification_loss": 0.6394400000572205,
+          "count_loss": -0.8411372900009155,
+          "epoch": 0.06031746031746032,
+          "learning_rate": 8.064516129032258e-05,
+          "loss": 1105.4241943359375,
+          "samples_seen": 80,
+          "step": 5,
+          "structure_loss": 0,
+          "throughput": 13.198911813806244,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 0.21428571428571427,
+          "train_proposal_oracle_recall": 0.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 0.0
+        },
+        {
+          "classification_loss": 0.6177501082420349,
+          "count_loss": 0.5443541407585144,
+          "epoch": 0.12380952380952381,
+          "learning_rate": 0.00016129032258064516,
+          "loss": 1010.9203491210938,
+          "samples_seen": 160,
+          "step": 10,
+          "structure_loss": 0,
+          "throughput": 13.878940090151147,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 0.3,
+          "train_proposal_oracle_recall": 0.2,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 0.3
+        },
+        {
+          "classification_loss": 0.1115432158112526,
+          "count_loss": 1.4507431983947754,
+          "epoch": 0.1873015873015873,
+          "learning_rate": 0.00024193548387096774,
+          "loss": 738.80908203125,
+          "samples_seen": 240,
+          "step": 15,
+          "structure_loss": 0,
+          "throughput": 14.39579662222688,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 0.625,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.3581088185310364,
+          "count_loss": 0.629532516002655,
+          "epoch": 0.2507936507936508,
+          "learning_rate": 0.0003225806451612903,
+          "loss": 541.9550170898438,
+          "samples_seen": 320,
+          "step": 20,
+          "structure_loss": 0,
+          "throughput": 14.902244638909458,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.546874463558197,
+          "count_loss": 0.6544537544250488,
+          "epoch": 0.3142857142857143,
+          "learning_rate": 0.0004032258064516129,
+          "loss": 465.0538024902344,
+          "samples_seen": 400,
+          "step": 25,
+          "structure_loss": 0,
+          "throughput": 15.100041685910865,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.7351100444793701,
+          "count_loss": 0.49079155921936035,
+          "epoch": 0.37777777777777777,
+          "learning_rate": 0.0004838709677419355,
+          "loss": 513.3694458007812,
+          "samples_seen": 480,
+          "step": 30,
+          "structure_loss": 0,
+          "throughput": 15.285871244835143,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.756144642829895,
+          "count_loss": 0.8166600465774536,
+          "epoch": 0.44126984126984126,
+          "learning_rate": 0.0004997570204861915,
+          "loss": 441.23974609375,
+          "samples_seen": 560,
+          "step": 35,
+          "structure_loss": 0,
+          "throughput": 15.128904363313387,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.7913937568664551,
+          "count_loss": 0.5091474652290344,
+          "epoch": 0.5047619047619047,
+          "learning_rate": 0.0004987707256362529,
+          "loss": 420.62091064453125,
+          "samples_seen": 640,
+          "step": 40,
+          "structure_loss": 0,
+          "throughput": 15.109975878623748,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.6634873747825623,
+          "count_loss": 0.45132988691329956,
+          "epoch": 0.5682539682539682,
+          "learning_rate": 0.0004970289222688129,
+          "loss": 394.8630676269531,
+          "samples_seen": 720,
+          "step": 45,
+          "structure_loss": 0,
+          "throughput": 15.100402689221756,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.6774692535400391,
+          "count_loss": 0.32203543186187744,
+          "epoch": 0.6317460317460317,
+          "learning_rate": 0.0004945369001834514,
+          "loss": 370.25537109375,
+          "samples_seen": 800,
+          "step": 50,
+          "structure_loss": 0,
+          "throughput": 15.099093262389298,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.314635694026947,
+          "count_loss": 0.789419949054718,
+          "epoch": 0.6952380952380952,
+          "learning_rate": 0.0004913022275693372,
+          "loss": 335.50189208984375,
+          "samples_seen": 880,
+          "step": 55,
+          "structure_loss": 0,
+          "throughput": 15.050197798637516,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.8714142441749573,
+          "count_loss": -0.1945776641368866,
+          "epoch": 0.7587301587301587,
+          "learning_rate": 0.00048733472802088654,
+          "loss": 325.2884216308594,
+          "samples_seen": 960,
+          "step": 60,
+          "structure_loss": 0,
+          "throughput": 14.911974530837771,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.5088893175125122,
+          "count_loss": 0.5310744643211365,
+          "epoch": 0.8222222222222222,
+          "learning_rate": 0.0004826464507038296,
+          "loss": 337.5024719238281,
+          "samples_seen": 1040,
+          "step": 65,
+          "structure_loss": 0,
+          "throughput": 14.920610823817976,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.8081566095352173,
+          "count_loss": -0.72316575050354,
+          "epoch": 0.8857142857142857,
+          "learning_rate": 0.00047725163376229063,
+          "loss": 302.4643859863281,
+          "samples_seen": 1120,
+          "step": 70,
+          "structure_loss": 0,
+          "throughput": 14.915372884522144,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.3720960319042206,
+          "count_loss": 0.6144648194313049,
+          "epoch": 0.9492063492063492,
+          "learning_rate": 0.0004711666610780115,
+          "loss": 350.3626403808594,
+          "samples_seen": 1200,
+          "step": 75,
+          "structure_loss": 0,
+          "throughput": 14.9390143981917,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.5443246960639954,
+          "count_loss": 0.21877890825271606,
+          "epoch": 1.0095238095238095,
+          "learning_rate": 0.00046441001251304177,
+          "loss": 309.06005859375,
+          "samples_seen": 1276,
+          "step": 80,
+          "structure_loss": 0,
+          "throughput": 12.21369961388289,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.4233604669570923,
+          "count_loss": 0.4737817645072937,
+          "epoch": 1.073015873015873,
+          "learning_rate": 0.000457002207787005,
+          "loss": 363.9913330078125,
+          "samples_seen": 1356,
+          "step": 85,
+          "structure_loss": 0,
+          "throughput": 12.300770160116578,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.42189690470695496,
+          "count_loss": 0.7652292251586914,
+          "epoch": 1.1365079365079365,
+          "learning_rate": 0.0004489657441593846,
+          "loss": 307.0371398925781,
+          "samples_seen": 1436,
+          "step": 90,
+          "structure_loss": 0,
+          "throughput": 12.511969880103912,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.44721460342407227,
+          "count_loss": -0.28812044858932495,
+          "epoch": 1.2,
+          "learning_rate": 0.0004403250281060862,
+          "loss": 349.0447692871094,
+          "samples_seen": 1516,
+          "step": 95,
+          "structure_loss": 0,
+          "throughput": 12.581653253727577,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.20673847198486328,
+          "count_loss": -0.2673240900039673,
+          "epoch": 1.2634920634920634,
+          "learning_rate": 0.0004311063011977723,
+          "loss": 331.7891540527344,
+          "samples_seen": 1596,
+          "step": 100,
+          "structure_loss": 0,
+          "throughput": 12.713122404422377,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.26454854011535645,
+          "count_loss": 0.19780784845352173,
+          "epoch": 1.326984126984127,
+          "learning_rate": 0.000421337560405075,
+          "loss": 299.37896728515625,
+          "samples_seen": 1676,
+          "step": 105,
+          "structure_loss": 0,
+          "throughput": 12.857569798101311,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.07761076837778091,
+          "count_loss": 0.6160683631896973,
+          "epoch": 1.3904761904761904,
+          "learning_rate": 0.0004110484730727161,
+          "loss": 322.0883483886719,
+          "samples_seen": 1756,
+          "step": 110,
+          "structure_loss": 0,
+          "throughput": 12.891039912666312,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.009840691462159157,
+          "count_loss": 0.6382105350494385,
+          "epoch": 1.453968253968254,
+          "learning_rate": 0.00040027028682075626,
+          "loss": 285.38970947265625,
+          "samples_seen": 1836,
+          "step": 115,
+          "structure_loss": 0,
+          "throughput": 13.048468610031701,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.3216016888618469,
+          "count_loss": -0.25155436992645264,
+          "epoch": 1.5174603174603174,
+          "learning_rate": 0.00038903573464660015,
+          "loss": 309.5289611816406,
+          "samples_seen": 1916,
+          "step": 120,
+          "structure_loss": 0,
+          "throughput": 13.092181701105192,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.17617693543434143,
+          "count_loss": 0.6166260242462158,
+          "epoch": 1.580952380952381,
+          "learning_rate": 0.0003773789355159587,
+          "loss": 308.13897705078125,
+          "samples_seen": 1996,
+          "step": 125,
+          "structure_loss": 0,
+          "throughput": 13.184790963143044,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.30062001943588257,
+          "count_loss": -0.21331137418746948,
+          "epoch": 1.6444444444444444,
+          "learning_rate": 0.000365335290744672,
+          "loss": 301.61761474609375,
+          "samples_seen": 2076,
+          "step": 130,
+          "structure_loss": 0,
+          "throughput": 13.263069779406983,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.655608057975769,
+          "count_loss": 0.1586938500404358,
+          "epoch": 1.707936507936508,
+          "learning_rate": 0.00035294137648607626,
+          "loss": 289.1959228515625,
+          "samples_seen": 2156,
+          "step": 135,
+          "structure_loss": 0,
+          "throughput": 13.342117477356888,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.05413701385259628,
+          "count_loss": 0.687052845954895,
+          "epoch": 1.7714285714285714,
+          "learning_rate": 0.0003402348326504287,
+          "loss": 307.799560546875,
+          "samples_seen": 2236,
+          "step": 140,
+          "structure_loss": 0,
+          "throughput": 13.427648162335737,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.1071276068687439,
+          "count_loss": 0.6681462526321411,
+          "epoch": 1.834920634920635,
+          "learning_rate": 0.00032725424859373687,
+          "loss": 307.6518859863281,
+          "samples_seen": 2316,
+          "step": 145,
+          "structure_loss": 0,
+          "throughput": 13.466995370509993,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.6340778470039368,
+          "count_loss": -0.2754080295562744,
+          "epoch": 1.8984126984126983,
+          "learning_rate": 0.0003140390459231529,
+          "loss": 300.2538757324219,
+          "samples_seen": 2396,
+          "step": 150,
+          "structure_loss": 0,
+          "throughput": 13.504995116141083,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.6366124153137207,
+          "count_loss": 0.17251724004745483,
+          "epoch": 1.961904761904762,
+          "learning_rate": 0.00030062935877484806,
+          "loss": 291.63592529296875,
+          "samples_seen": 2476,
+          "step": 155,
+          "structure_loss": 0,
+          "throughput": 13.526173479604823,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.13368281722068787,
+          "count_loss": 0.6636746525764465,
+          "epoch": 2.022222222222222,
+          "learning_rate": 0.0002870659119279605,
+          "loss": 269.2569885253906,
+          "samples_seen": 2552,
+          "step": 160,
+          "structure_loss": 0,
+          "throughput": 12.334584887100952,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.7602171897888184,
+          "count_loss": 0.17702430486679077,
+          "epoch": 2.085714285714286,
+          "learning_rate": 0.0002733898971247795,
+          "loss": 290.2608337402344,
+          "samples_seen": 2632,
+          "step": 165,
+          "structure_loss": 0,
+          "throughput": 12.409140971581989,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.8369126319885254,
+          "count_loss": -0.9005925059318542,
+          "epoch": 2.149206349206349,
+          "learning_rate": 0.0002596428479727776,
+          "loss": 277.3347473144531,
+          "samples_seen": 2712,
+          "step": 170,
+          "structure_loss": 0,
+          "throughput": 12.501597420131656,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.809665858745575,
+          "count_loss": -0.19374620914459229,
+          "epoch": 2.212698412698413,
+          "learning_rate": 0.0002458665138084104,
+          "loss": 290.716552734375,
+          "samples_seen": 2792,
+          "step": 175,
+          "structure_loss": 0,
+          "throughput": 12.53719029494081,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.08627443015575409,
+          "count_loss": 0.6401442289352417,
+          "epoch": 2.276190476190476,
+          "learning_rate": 0.00023210273290575332,
+          "loss": 300.92083740234375,
+          "samples_seen": 2872,
+          "step": 180,
+          "structure_loss": 0,
+          "throughput": 12.58431880152463,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.0832391083240509,
+          "count_loss": 0.42499083280563354,
+          "epoch": 2.33968253968254,
+          "learning_rate": 0.00021839330541503844,
+          "loss": 292.2723693847656,
+          "samples_seen": 2952,
+          "step": 185,
+          "structure_loss": 0,
+          "throughput": 12.626757877783621,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.7792009711265564,
+          "count_loss": 0.1671084761619568,
+          "epoch": 2.403174603174603,
+          "learning_rate": 0.0002047798664169726,
+          "loss": 282.3072814941406,
+          "samples_seen": 3032,
+          "step": 190,
+          "structure_loss": 0,
+          "throughput": 12.688997484614754,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.0769859328866005,
+          "count_loss": 0.6699498891830444,
+          "epoch": 2.466666666666667,
+          "learning_rate": 0.00019130375947836478,
+          "loss": 291.21929931640625,
+          "samples_seen": 3112,
+          "step": 195,
+          "structure_loss": 0,
+          "throughput": 12.721734386316522,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.6391072869300842,
+          "count_loss": 0.16491878032684326,
+          "epoch": 2.53015873015873,
+          "learning_rate": 0.0001780059110930735,
+          "loss": 284.7198181152344,
+          "samples_seen": 3192,
+          "step": 200,
+          "structure_loss": 0,
+          "throughput": 12.765405675653746,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.36578449606895447,
+          "count_loss": 0.1390194594860077,
+          "epoch": 2.5936507936507938,
+          "learning_rate": 0.00016492670638958924,
+          "loss": 290.0213317871094,
+          "samples_seen": 3272,
+          "step": 205,
+          "structure_loss": 0,
+          "throughput": 12.835726877391544,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.677689790725708,
+          "count_loss": 0.1597738265991211,
+          "epoch": 2.657142857142857,
+          "learning_rate": 0.0001521058664827272,
+          "loss": 273.58795166015625,
+          "samples_seen": 3352,
+          "step": 210,
+          "structure_loss": 0,
+          "throughput": 12.88498731589643,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.6142787933349609,
+          "count_loss": 0.20900952816009521,
+          "epoch": 2.7206349206349207,
+          "learning_rate": 0.0001395823278419065,
+          "loss": 280.222412109375,
+          "samples_seen": 3432,
+          "step": 215,
+          "structure_loss": 0,
+          "throughput": 12.94402828007056,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.11077184230089188,
+          "count_loss": 0.6317040920257568,
+          "epoch": 2.784126984126984,
+          "learning_rate": 0.00012739412404237305,
+          "loss": 271.7598571777344,
+          "samples_seen": 3512,
+          "step": 220,
+          "structure_loss": 0,
+          "throughput": 12.985773450840336,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.015002550557255745,
+          "count_loss": 0.6377647519111633,
+          "epoch": 2.8476190476190477,
+          "learning_rate": 0.00011557827025848047,
+          "loss": 273.3487854003906,
+          "samples_seen": 3592,
+          "step": 225,
+          "structure_loss": 0,
+          "throughput": 13.026629958250739,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.08219863474369049,
+          "count_loss": -0.23560339212417603,
+          "epoch": 2.911111111111111,
+          "learning_rate": 0.00010417065084982347,
+          "loss": 319.208984375,
+          "samples_seen": 3672,
+          "step": 230,
+          "structure_loss": 0,
+          "throughput": 13.032377026914089,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.03629103675484657,
+          "count_loss": 0.6395848393440247,
+          "epoch": 2.9746031746031747,
+          "learning_rate": 9.320591038161574e-05,
+          "loss": 286.2090759277344,
+          "samples_seen": 3752,
+          "step": 235,
+          "structure_loss": 0,
+          "throughput": 13.091188699018998,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.0739227905869484,
+          "count_loss": -0.04133540391921997,
+          "epoch": 3.034920634920635,
+          "learning_rate": 8.271734841028553e-05,
+          "loss": 260.0376892089844,
+          "samples_seen": 3828,
+          "step": 240,
+          "structure_loss": 0,
+          "throughput": 12.38481686396682,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.020322520285844803,
+          "count_loss": 0.6405742764472961,
+          "epoch": 3.0984126984126985,
+          "learning_rate": 7.273681835381568e-05,
+          "loss": 283.9354248046875,
+          "samples_seen": 3908,
+          "step": 245,
+          "structure_loss": 0,
+          "throughput": 12.437600037003502,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.519160807132721,
+          "count_loss": 0.13605085015296936,
+          "epoch": 3.1619047619047618,
+          "learning_rate": 6.32946307539616e-05,
+          "loss": 286.1088562011719,
+          "samples_seen": 3988,
+          "step": 250,
+          "structure_loss": 0,
+          "throughput": 12.459174424635767,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.07266715914011002,
+          "count_loss": 0.20672303438186646,
+          "epoch": 3.2253968253968255,
+          "learning_rate": 5.441946122413086e-05,
+          "loss": 282.335205078125,
+          "samples_seen": 4068,
+          "step": 255,
+          "structure_loss": 0,
+          "throughput": 12.5070006488802,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.09855256229639053,
+          "count_loss": -0.2578449845314026,
+          "epoch": 3.2888888888888888,
+          "learning_rate": 4.6138263362488804e-05,
+          "loss": 290.1330871582031,
+          "samples_seen": 4148,
+          "step": 260,
+          "structure_loss": 0,
+          "throughput": 12.536667118313087,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.03848549723625183,
+          "count_loss": -0.20369499921798706,
+          "epoch": 3.3523809523809525,
+          "learning_rate": 3.847618689476612e-05,
+          "loss": 282.4169616699219,
+          "samples_seen": 4228,
+          "step": 265,
+          "structure_loss": 0,
+          "throughput": 12.58331029688988,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.013259325176477432,
+          "count_loss": 0.6352856755256653,
+          "epoch": 3.4158730158730157,
+          "learning_rate": 3.145650129536862e-05,
+          "loss": 292.96624755859375,
+          "samples_seen": 4308,
+          "step": 270,
+          "structure_loss": 0,
+          "throughput": 12.603379959267667,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.02417047880589962,
+          "count_loss": 0.6295197010040283,
+          "epoch": 3.4793650793650794,
+          "learning_rate": 2.510052511874822e-05,
+          "loss": 278.6900329589844,
+          "samples_seen": 4388,
+          "step": 275,
+          "structure_loss": 0,
+          "throughput": 12.638099299148244,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.2839367687702179,
+          "count_loss": -0.24588489532470703,
+          "epoch": 3.5428571428571427,
+          "learning_rate": 1.9427561255653815e-05,
+          "loss": 304.2207946777344,
+          "samples_seen": 4468,
+          "step": 280,
+          "structure_loss": 0,
+          "throughput": 12.660789921468323,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.5408204793930054,
+          "count_loss": -0.4666212201118469,
+          "epoch": 3.6063492063492064,
+          "learning_rate": 1.4454838310886426e-05,
+          "loss": 292.63067626953125,
+          "samples_seen": 4548,
+          "step": 285,
+          "structure_loss": 0,
+          "throughput": 12.69289135727836,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.05088448151946068,
+          "count_loss": 0.6506211161613464,
+          "epoch": 3.6698412698412697,
+          "learning_rate": 1.0197458280592542e-05,
+          "loss": 283.25592041015625,
+          "samples_seen": 4628,
+          "step": 290,
+          "structure_loss": 0,
+          "throughput": 12.74150539932057,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.051421623677015305,
+          "count_loss": 0.4226207137107849,
+          "epoch": 3.7333333333333334,
+          "learning_rate": 6.6683506879985645e-06,
+          "loss": 274.3655090332031,
+          "samples_seen": 4708,
+          "step": 295,
+          "structure_loss": 0,
+          "throughput": 12.765633989409716,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.096291184425354,
+          "count_loss": 0.6301987171173096,
+          "epoch": 3.7968253968253967,
+          "learning_rate": 3.8782333168732034e-06,
+          "loss": 263.3916015625,
+          "samples_seen": 4788,
+          "step": 300,
+          "structure_loss": 0,
+          "throughput": 12.810312962227545,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.8760733604431152,
+          "count_loss": -1.2383356094360352,
+          "epoch": 3.8603174603174604,
+          "learning_rate": 1.8355796619708987e-06,
+          "loss": 288.7824401855469,
+          "samples_seen": 4868,
+          "step": 305,
+          "structure_loss": 0,
+          "throughput": 12.836158008986816,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.026291830465197563,
+          "count_loss": -0.2568281292915344,
+          "epoch": 3.923809523809524,
+          "learning_rate": 5.465931953063663e-07,
+          "loss": 281.9969482421875,
+          "samples_seen": 4948,
+          "step": 310,
+          "structure_loss": 0,
+          "throughput": 12.884367118228509,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        },
+        {
+          "classification_loss": 0.08545856177806854,
+          "count_loss": 0.6388359069824219,
+          "epoch": 3.9873015873015873,
+          "learning_rate": 1.518852641424484e-08,
+          "loss": 292.9375915527344,
+          "samples_seen": 5028,
+          "step": 315,
+          "structure_loss": 0,
+          "throughput": 12.909271050351053,
+          "train_candidates_per_query": 192.0,
+          "train_end_recall": 1.0,
+          "train_proposal_oracle_recall": 1.0,
+          "train_recall_length_5_8": 1.0,
+          "train_start_recall": 1.0
+        }
+      ]
+    }
+  },
+  "warnings": [
+    "Synthetic controlled contrasts only; not institutional AML/CFT ground truth.",
+    "The adapter predicts advisory semantic primitives, not SAFR dispositions.",
+    "A single seed is a pipeline pilot, not a model-selection result.",
+    "Publication remains disabled even if synthetic gates pass."
+  ]
+}

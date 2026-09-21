@@ -1,0 +1,98 @@
+{
+  "best_epoch": 1,
+  "checkpoint_selection": {
+    "lexicographic_order": [
+      "maximize contrast_pair_accuracy",
+      "minimize false_clear_rate",
+      "maximize exact_set_accuracy",
+      "minimize false_hold_rate",
+      "minimize nll"
+    ],
+    "minimum_epochs": 2,
+    "patience": 2,
+    "split": "teacher paraphrase variant t02",
+    "stop_on_perfect_semantic_metrics": true,
+    "test_or_ood_loaded": false
+  },
+  "completed_at": "2026-09-21T16:02:43.656260Z",
+  "effective_batch": 64,
+  "elapsed_seconds": 222.26123890099996,
+  "encoder_learning_rate": 2.5e-05,
+  "epochs_completed": 3,
+  "epochs_requested": 6,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gradient_accumulation": 8,
+  "gradient_checkpointing": true,
+  "head_learning_rate": 0.0001,
+  "history": [
+    {
+      "checkpoint_improved": true,
+      "elapsed_seconds": 75.33344308899996,
+      "encoder_learning_rate": 2.4447151411891924e-05,
+      "epoch": 1,
+      "head_learning_rate": 9.77886056475677e-05,
+      "loss": 0.36571996779668897,
+      "paraphrase_validation": {
+        "contrast_groups": 180,
+        "contrast_pair_accuracy": 0.9833333333333333,
+        "exact_set_accuracy": 0.9916666666666667,
+        "examples": 360,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.016666666666666666,
+        "nll": 0.06980540032188097
+      },
+      "proper_reward": -0.16265503414093502,
+      "sigma": 0.4
+    },
+    {
+      "checkpoint_improved": false,
+      "elapsed_seconds": 148.38779309099993,
+      "encoder_learning_rate": 2.058765758713307e-05,
+      "epoch": 2,
+      "head_learning_rate": 8.235063034853228e-05,
+      "loss": -0.6018622019934275,
+      "paraphrase_validation": {
+        "contrast_groups": 180,
+        "contrast_pair_accuracy": 0.9277777777777778,
+        "exact_set_accuracy": 0.9638888888888889,
+        "examples": 360,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.07222222222222222,
+        "nll": 0.1675844044321113
+      },
+      "proper_reward": 0.4173223586309524,
+      "sigma": 0.34
+    },
+    {
+      "checkpoint_improved": false,
+      "elapsed_seconds": 221.738337763,
+      "encoder_learning_rate": 1.4182946648136743e-05,
+      "epoch": 3,
+      "head_learning_rate": 5.673178659254697e-05,
+      "loss": -0.6610334608289931,
+      "paraphrase_validation": {
+        "contrast_groups": 180,
+        "contrast_pair_accuracy": 0.9611111111111111,
+        "exact_set_accuracy": 0.9805555555555555,
+        "examples": 360,
+        "false_clear_rate": 0.011111111111111112,
+        "false_hold_rate": 0.027777777777777776,
+        "nll": 0.09944403146704038
+      },
+      "proper_reward": 0.41984315902467756,
+      "sigma": 0.28
+    }
+  ],
+  "micro_batch_per_gpu": 8,
+  "objective": "RLCD proper reward + soft cross entropy",
+  "optimizer": "AdamW",
+  "peak_cuda_bytes_rank_0": 10353982976,
+  "schema": "safr-laya-distillation-training-state-v2",
+  "seed": 42017,
+  "stop_reason": "paraphrase_validation_patience_exhausted",
+  "target_policy": "0.05 label smoothing on train; hard labels on validation",
+  "warmup_ratio": 0.08,
+  "warmup_updates": 19,
+  "weight_decay": 0.01,
+  "world_size": 1
+}

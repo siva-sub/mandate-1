@@ -1,0 +1,31 @@
+{
+  "shadow_only": true,
+  "execution_permitted": false,
+  "example_id": "fw-0241-a",
+  "prediction": {
+    "model": "laya-rl-agent",
+    "answers": {
+      "primary governance semantic finding": {
+        "type": "choice",
+        "choice": "no material semantic exception",
+        "probabilities": {
+          "no material semantic exception": 0.5265,
+          "insufficient evidence": 0.445,
+          "outside mandate": 0.0051,
+          "influencing action": 0.0056,
+          "trace contradictory": 0.006,
+          "instruction conflicting": 0.0065,
+          "no reviewed analogue": 0.0053
+        },
+        "confidence": 0.5656,
+        "action": {
+          "act_probability": 1.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 589,
+      "output_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "completed_source_groups": 180,
+  "failed_batches": [],
+  "generated_at": "2026-09-21T15:37:18.026253Z",
+  "generated_examples": 720,
+  "generated_groups": 360,
+  "label_status": "teacher_generated_pending_self_consistency_review",
+  "output": {
+    "bytes": 2291392,
+    "path": "data/safr-semantic-firewall-v0.1-teacher-augmented/dataset/train-teacher-raw.jsonl",
+    "sha256": "2dda036a06085ba3219c8108835b190f5a3519dad1a14ea3c51eb7a49ee91cb9"
+  },
+  "schema": "safr-teacher-paraphrase-generation-v1",
+  "source_groups": 180,
+  "source_path": "data/safr-semantic-firewall-v0.1/dataset/train.jsonl",
+  "source_sha256": "7c498ee626b4b3cfb45096afa6039f00eb4f81f4dff735730083135ef522c493",
+  "teacher": {
+    "api_alias_mutable": true,
+    "base_url_host": "api.deepseek.com",
+    "requested_model": "deepseek-flash",
+    "thinking": "disabled"
+  },
+  "usage": {
+    "completion_tokens": 219538.0,
+    "prompt_cache_hit_tokens": 148043.0,
+    "prompt_cache_miss_tokens": 60991.0,
+    "prompt_tokens": 209034.0,
+    "total_tokens": 428572.0
+  },
+  "variants_per_group": 2,
+  "warnings": [
+    "Only source train groups were sent; test, OOD, dev, and calibration text were excluded.",
+    "The teacher rewrote text but did not assign the inherited programmatic labels.",
+    "Generation is not independent validation and must pass a separate classification check.",
+    "The teacher model name is a mutable hosted API alias.",
+    "No generated example is practitioner-reviewed ground truth."
+  ]
+}

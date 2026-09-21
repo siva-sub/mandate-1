@@ -1,0 +1,707 @@
+{
+  "baselines": {
+    "keyword_rules": "Frozen regex patterns; no fitted parameters.",
+    "word_unigram_bigram_naive_bayes": "Multinomial NB fitted only on dataset/train.jsonl with alpha=1."
+  },
+  "input_sha256": {
+    "calibration": "6963dd951c9e31bf6eefeb54e79d25bfbc20cb7e36b505255a3a3df8c9f50257",
+    "dev": "7391252810a5a6e560764914bbf30881874b9ac17ef9b3f18bcd3d3bc9558381",
+    "ood": "d20ccb2807caeee348f1d3fbdb3e81577b9f8ccdb367e9362c0e65e4d88787c3",
+    "test": "715cb4508fec4de58e742dd69d08e72b866eb973587759e33d5d48f487ac1053",
+    "train": "7c498ee626b4b3cfb45096afa6039f00eb4f81f4dff735730083135ef522c493"
+  },
+  "interpretation": "These cheap baselines are intended to expose lexical shortcuts. Test and OOD are held-out contrast renderings; a useful semantic model must improve contrast-pair accuracy without an unacceptable false-clear rate.",
+  "observed_at": "2026-09-21T12:13:56.516297Z",
+  "release_manifest_sha256": "4c84c30e319e973c17ea7b39b252fea666b46c44ba186da946f0a96755fb9e85",
+  "results": {
+    "calibration": {
+      "keyword_rules": {
+        "citation_f1": 0.9041095890410958,
+        "citation_precision": 0.9166666666666666,
+        "citation_recall": 0.8918918918918919,
+        "contrast_pair_accuracy": 0.8333333333333334,
+        "exact_set_accuracy": 0.9166666666666666,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.16666666666666666,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 0.9393939393939394,
+        "micro_f1": 0.9166666666666666,
+        "micro_precision": 0.9166666666666666,
+        "micro_recall": 0.9166666666666666,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.9090909090909091,
+            "fn": 5,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "support": 30,
+            "tp": 25
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_novel_context": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      },
+      "word_unigram_bigram_naive_bayes": {
+        "citation_f1": 1.0,
+        "citation_precision": 1.0,
+        "citation_recall": 1.0,
+        "contrast_pair_accuracy": 1.0,
+        "exact_set_accuracy": 1.0,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.0,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 1.0,
+        "micro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 30,
+            "tp": 30
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_novel_context": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      }
+    },
+    "dev": {
+      "keyword_rules": {
+        "citation_f1": 0.9041095890410958,
+        "citation_precision": 0.9166666666666666,
+        "citation_recall": 0.8918918918918919,
+        "contrast_pair_accuracy": 0.8333333333333334,
+        "exact_set_accuracy": 0.9166666666666666,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.16666666666666666,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 0.9393939393939394,
+        "micro_f1": 0.9166666666666666,
+        "micro_precision": 0.9166666666666666,
+        "micro_recall": 0.9166666666666666,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.9090909090909091,
+            "fn": 5,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "support": 30,
+            "tp": 25
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_novel_context": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      },
+      "word_unigram_bigram_naive_bayes": {
+        "citation_f1": 1.0,
+        "citation_precision": 1.0,
+        "citation_recall": 1.0,
+        "contrast_pair_accuracy": 1.0,
+        "exact_set_accuracy": 1.0,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.0,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 1.0,
+        "micro_f1": 1.0,
+        "micro_precision": 1.0,
+        "micro_recall": 1.0,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 30,
+            "tp": 30
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_novel_context": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      }
+    },
+    "ood": {
+      "keyword_rules": {
+        "citation_f1": 0.41269841269841273,
+        "citation_precision": 0.5,
+        "citation_recall": 0.35135135135135137,
+        "contrast_pair_accuracy": 0.0,
+        "exact_set_accuracy": 0.5,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 1.0,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 0.5714285714285714,
+        "micro_f1": 0.5,
+        "micro_precision": 0.5,
+        "micro_recall": 0.5,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.0,
+            "fn": 30,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 30,
+            "tp": 0
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_novel_context": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      },
+      "word_unigram_bigram_naive_bayes": {
+        "citation_f1": 0.41269841269841273,
+        "citation_precision": 0.5,
+        "citation_recall": 0.35135135135135137,
+        "contrast_pair_accuracy": 0.0,
+        "exact_set_accuracy": 0.5,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 1.0,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 0.5714285714285714,
+        "micro_f1": 0.5,
+        "micro_precision": 0.5,
+        "micro_recall": 0.5,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.0,
+            "fn": 30,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 30,
+            "tp": 0
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_novel_context": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 5,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      }
+    },
+    "test": {
+      "keyword_rules": {
+        "citation_f1": 0.41269841269841273,
+        "citation_precision": 0.5,
+        "citation_recall": 0.35135135135135137,
+        "contrast_pair_accuracy": 0.0,
+        "exact_set_accuracy": 0.5,
+        "examples": 120,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 1.0,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 0.5714285714285714,
+        "micro_f1": 0.5,
+        "micro_precision": 0.5,
+        "micro_recall": 0.5,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.0,
+            "fn": 60,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 60,
+            "tp": 0
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "request_instruction_clarification": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "request_missing_evidence": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "resolve_trace_conflict": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "route_novel_context": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "route_scope_review": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          }
+        },
+        "valid_output_rate": 1.0
+      },
+      "word_unigram_bigram_naive_bayes": {
+        "citation_f1": 0.41269841269841273,
+        "citation_precision": 0.5,
+        "citation_recall": 0.35135135135135137,
+        "contrast_pair_accuracy": 0.0,
+        "exact_set_accuracy": 0.5,
+        "examples": 120,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 1.0,
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        },
+        "macro_f1": 0.5714285714285714,
+        "micro_f1": 0.5,
+        "micro_precision": 0.5,
+        "micro_recall": 0.5,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.0,
+            "fn": 60,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 60,
+            "tp": 0
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "request_instruction_clarification": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "request_missing_evidence": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "resolve_trace_conflict": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "route_novel_context": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          },
+          "route_scope_review": {
+            "f1": 0.6666666666666666,
+            "fn": 0,
+            "fp": 10,
+            "precision": 0.5,
+            "recall": 1.0,
+            "support": 10,
+            "tp": 10
+          }
+        },
+        "valid_output_rate": 1.0
+      }
+    }
+  },
+  "schema": "safr-firewall-cheap-baselines-v1"
+}

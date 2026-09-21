@@ -1,0 +1,20 @@
+{
+  "release": "v0.2.0",
+  "research_publication_authorized": true,
+  "deployment_approved": false,
+  "model_status": "experimental-shadow-only",
+  "code_model_license": "Apache-2.0",
+  "dataset_license": "CC-BY-4.0",
+  "historical_receipts": "Unchanged. Failed model-use gates are not overridden by publication permission.",
+  "excluded": [
+    "credentials",
+    "archive",
+    "agent skills",
+    "MAS PDF",
+    "raw generation batches",
+    "failed weights",
+    "unrelated experiments"
+  ],
+  "upstream_model": "convaiinnovations/laya-typed-decisions",
+  "upstream_revision": "f9ab0b228f0fc0f14d873dbc99038f135c2da1b2"
+}

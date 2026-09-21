@@ -1,0 +1,81 @@
+{
+  "citation_model_status": "deferred",
+  "examples": {
+    "calibration": 60,
+    "dev": 210,
+    "ood": 60,
+    "test": 120,
+    "train": 1260
+  },
+  "files": {
+    "gliner25/calibration.jsonl": {
+      "bytes": 182807,
+      "sha256": "147a8da708bd60df9281dea290b237c3b251fd294bcc88efa555776bc6a39539"
+    },
+    "gliner25/dev.jsonl": {
+      "bytes": 639887,
+      "sha256": "72880b9ff808f4cf734656616511df6688077ede680dbdbc8c4fb899699ec23d"
+    },
+    "gliner25/ood.jsonl": {
+      "bytes": 180945,
+      "sha256": "e37e18195ab87be9d56e5b69ffa5054f125dc3d133610a42a81714f1744413cc"
+    },
+    "gliner25/test.jsonl": {
+      "bytes": 361946,
+      "sha256": "8a617a029fea05a191c85cd3fb29b591ed8eb38684c46ce3007f42f5212df49d"
+    },
+    "gliner25/train.jsonl": {
+      "bytes": 3841842,
+      "sha256": "ac04b4ecb6fabc286bafa908b0629721b2730950e0ee23d10bf3b7e214b4e2db"
+    }
+  },
+  "inference_mode": "one semantic-finding query per envelope",
+  "positive_oversample_factor": 6,
+  "schema": "safr-gliner-semantic-finding-v2",
+  "source_dataset_schema": "safr-semantic-firewall-contrast-v0.1",
+  "source_examples": {
+    "calibration": 60,
+    "dev": 60,
+    "ood": 60,
+    "test": 120,
+    "train": 360
+  },
+  "source_sha256": {
+    "calibration": "6963dd951c9e31bf6eefeb54e79d25bfbc20cb7e36b505255a3a3df8c9f50257",
+    "dev": "7391252810a5a6e560764914bbf30881874b9ac17ef9b3f18bcd3d3bc9558381",
+    "ood": "d20ccb2807caeee348f1d3fbdb3e81577b9f8ccdb367e9362c0e65e4d88787c3",
+    "test": "715cb4508fec4de58e742dd69d08e72b866eb973587759e33d5d48f487ac1053",
+    "train": "7c498ee626b4b3cfb45096afa6039f00eb4f81f4dff735730083135ef522c493"
+  },
+  "task_count": 1,
+  "tasks": [
+    {
+      "labels": [
+        "no material semantic exception",
+        "insufficient evidence",
+        "outside mandate",
+        "influencing action",
+        "trace contradictory",
+        "instruction conflicting",
+        "no reviewed analogue"
+      ],
+      "raise_only_mapping": {
+        "influencing action": "quarantine_untrusted_instruction",
+        "instruction conflicting": "request_instruction_clarification",
+        "insufficient evidence": "request_missing_evidence",
+        "no material semantic exception": "no_semantic_exception",
+        "no reviewed analogue": "route_novel_context",
+        "outside mandate": "route_scope_review",
+        "trace contradictory": "resolve_trace_conflict"
+      },
+      "task": "primary governance semantic finding"
+    }
+  ],
+  "training_construction": "One seven-way semantic-finding task. Exception rows are repeated six times in train and dev so each issue label and the no-exception label has 180 train instances. Citation extraction is trained separately.",
+  "warnings": [
+    "Synthetic programmatic labels only; no institutional or human-reviewed ground truth.",
+    "The model predicts one advisory semantic finding, never SAFR's binding disposition.",
+    "The current benchmark contains one exception at a time; multi-finding cases are unsupported.",
+    "Teacher-generated text, if added later, must remain outside fixed test and OOD splits."
+  ]
+}

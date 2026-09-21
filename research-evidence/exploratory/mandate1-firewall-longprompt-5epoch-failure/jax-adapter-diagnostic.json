@@ -1,0 +1,1082 @@
+{
+  "adapter": {
+    "bytes": 7906624,
+    "scale": 2.0,
+    "sha256": "458618ab984a2032e884b9b96778994ac2945c77987ee8d0118d014b50d008bc"
+  },
+  "base": {
+    "checkpoint_sha256": "c234c70dccc7a9115e7c41ac2e41d3655fea3b85c245dd898b46179fb90c6c0c",
+    "repo": "Cactus-Compute/needle3",
+    "revision": "b274efcb211a9eef48c9a88da4b43bd569696a39",
+    "tokenizer_sha256": "97dfd5666620b19875deba9e55953d312364e7763bd08bee428b94f1b9491b25"
+  },
+  "environment": {
+    "backend": "gpu",
+    "buffer_len": 1152,
+    "devices": [
+      "cuda:0"
+    ],
+    "jax": "0.8.1",
+    "max_new_tokens": 128,
+    "weight_bits": 4
+  },
+  "observed_at": "2026-09-21T11:27:03.506466Z",
+  "results": {
+    "test": [
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0241-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "request_missing_evidence",
+              "supporting_span_ids": [
+                "action",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.917342082999994,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 886,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0241-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.862550046000024,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 907,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0242-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "route_scope_review",
+              "supporting_span_ids": [
+                "mandate",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 50,
+        "latency_seconds": 6.766346032000001,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 823,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0242-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.80462435000004,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 844,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0243-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "quarantine_untrusted_instruction",
+              "supporting_span_ids": [
+                "evidence-1",
+                "trace-2",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.827814381000053,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 910,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0243-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.855332887000031,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 899,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0244-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "resolve_trace_conflict",
+              "supporting_span_ids": [
+                "action",
+                "trace-2"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.839153949000092,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 873,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0244-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.860797972,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 866,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0245-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "request_instruction_clarification",
+              "supporting_span_ids": [
+                "instruction",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.865125237000029,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 864,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0245-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.864133569999922,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 895,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0246-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "route_novel_context",
+              "supporting_span_ids": [
+                "action",
+                "history"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.872253360000059,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 869,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0246-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.902323875999855,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 896,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0247-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "request_missing_evidence",
+              "supporting_span_ids": [
+                "action",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.883449387999917,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 895,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0247-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.8867237519998525,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 915,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      }
+    ],
+    "train": [
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0001-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "request_missing_evidence",
+              "supporting_span_ids": [
+                "action",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 30.26074630800008,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 908,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0001-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 8.588236026000004,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 913,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0002-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "route_scope_review",
+              "supporting_span_ids": [
+                "mandate",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 8.45476121999991,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 850,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0002-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 8.006407255999875,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 858,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0003-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "quarantine_untrusted_instruction",
+              "supporting_span_ids": [
+                "evidence-1",
+                "trace-2",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.8130934519999755,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 920,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0003-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.739292808999835,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 912,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0004-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "resolve_trace_conflict",
+              "supporting_span_ids": [
+                "action",
+                "trace-2"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.723537561000057,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 898,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0004-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.7388327589999335,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 870,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0005-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "request_instruction_clarification",
+              "supporting_span_ids": [
+                "instruction",
+                "action"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.759019125000123,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 885,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0005-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.8144345820001035,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 897,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0006-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "route_novel_context",
+              "supporting_span_ids": [
+                "action",
+                "history"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.909428753000157,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 890,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0006-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.940116519999947,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 883,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": false,
+        "example_id": "fw-0007-a",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "request_missing_evidence",
+              "supporting_span_ids": [
+                "action",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 56,
+        "latency_seconds": 7.706385453999928,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "route_novel_context",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 912,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      },
+      {
+        "exact_call_match": true,
+        "example_id": "fw-0007-b",
+        "expected_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "generated_tokens": 58,
+        "latency_seconds": 7.943418723999912,
+        "parse_error": null,
+        "predicted_calls": [
+          {
+            "arguments": {
+              "control_action": "no_semantic_exception",
+              "supporting_span_ids": [
+                "mandate",
+                "action",
+                "trace-2",
+                "evidence-1"
+              ]
+            },
+            "name": "record_semantic_firewall_finding"
+          }
+        ],
+        "prompt_tokens": 917,
+        "reasoning_retained": false,
+        "stop_reason": "im_end"
+      }
+    ]
+  },
+  "schema": "safr-firewall-jax-adapter-diagnostic-v1",
+  "summary": {
+    "test": {
+      "exact_call_matches": 7,
+      "examples": 14,
+      "parsed": 14,
+      "terminated": 14
+    },
+    "train": {
+      "exact_call_matches": 7,
+      "examples": 14,
+      "parsed": 14,
+      "terminated": 14
+    }
+  },
+  "warning": "Bounded diagnostic subset; not a release evaluation or evidence of AML efficacy."
+}

@@ -1,0 +1,67 @@
+{
+  "contrast_group_count": 330,
+  "dataset_version": "safr-semantic-firewall-contrast-v0.1",
+  "example_count": 660,
+  "files": {
+    "dataset/calibration.jsonl": {
+      "bytes": 154535,
+      "sha256": "6963dd951c9e31bf6eefeb54e79d25bfbc20cb7e36b505255a3a3df8c9f50257"
+    },
+    "dataset/dev.jsonl": {
+      "bytes": 153095,
+      "sha256": "7391252810a5a6e560764914bbf30881874b9ac17ef9b3f18bcd3d3bc9558381"
+    },
+    "dataset/ood.jsonl": {
+      "bytes": 151905,
+      "sha256": "d20ccb2807caeee348f1d3fbdb3e81577b9f8ccdb367e9362c0e65e4d88787c3"
+    },
+    "dataset/test.jsonl": {
+      "bytes": 303362,
+      "sha256": "715cb4508fec4de58e742dd69d08e72b866eb973587759e33d5d48f487ac1053"
+    },
+    "dataset/train.jsonl": {
+      "bytes": 922170,
+      "sha256": "7c498ee626b4b3cfb45096afa6039f00eb4f81f4dff735730083135ef522c493"
+    },
+    "needle/calibration.jsonl": {
+      "bytes": 201835,
+      "sha256": "7cb556065e06703bc20dba4e669fab8dc7cd65ca2f56f4875a85e84e602b066a"
+    },
+    "needle/dev.jsonl": {
+      "bytes": 200395,
+      "sha256": "5ab1b89de95e401345e3cc84c932928c6802a6c37c49ba0c1a192bfeb5b49b83"
+    },
+    "needle/ood.jsonl": {
+      "bytes": 199205,
+      "sha256": "a78112011faafa97ff0efb63159eaaab78551dea00d340c12a91bcf12e4e38af"
+    },
+    "needle/test.jsonl": {
+      "bytes": 397962,
+      "sha256": "858005ff21194fdd8e89dfe815a80d2798bc1bacf39ca0be3124ea7832474957"
+    },
+    "needle/train.jsonl": {
+      "bytes": 4217070,
+      "sha256": "9381031c835d35dd724f2788ce88a938e9debb68b5ef7596ba7558d01a0ccbd2"
+    },
+    "split-manifest.json": {
+      "bytes": 12634,
+      "sha256": "e5aa2a54d2bbbc809261d0cbd0eb7bf77f1d4f106ccfacdcb0343a8e3a03e64b"
+    }
+  },
+  "generator_version": "safr-firewall-generator-0.1.0",
+  "needle_examples": {
+    "calibration": 60,
+    "dev": 60,
+    "ood": 60,
+    "test": 120,
+    "train": 1260
+  },
+  "schema_version": "safr-semantic-firewall-release-v0.1",
+  "seed": 94217,
+  "warnings": [
+    "Every case is synthetic.",
+    "Labels are programmatic and not independent human ground truth.",
+    "The benchmark tests semantic routing and citations, not AML detection or regulatory compliance.",
+    "A tuned result must beat frozen baselines and safety gates before any model release claim."
+  ]
+}

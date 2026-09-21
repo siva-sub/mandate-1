@@ -1,0 +1,19 @@
+Mandate-1 — independent SAFR-inspired research by siva-sub.
+Code and original model adaptation: Apache License 2.0.
+Original synthetic dataset: Creative Commons Attribution 4.0 International.
+
+The model adapts convaiinnovations/laya-typed-decisions, revision
+f9ab0b228f0fc0f14d873dbc99038f135c2da1b2 (Apache-2.0).
+Laya software: NandhaKishorM/laya, revision
+42626c348753fbb17572a813127df2278a1ec527 (Apache-2.0).
+The bundled wheel preserves upstream license/notice files and is unmodified.
+Upstream repository: https://github.com/NandhaKishorM/laya
+
+Synthetic paraphrases and reference-judge findings were obtained from the
+DeepSeek Flash API with thinking disabled. Hosted aliases are mutable.
+API access is a separate service and is not granted by this repository license.
+
+Conceptual reference: Monetary Authority of Singapore, SAFR framework.
+https://www.mas.gov.sg/-/media/mas-media-library/development/fintech/ai-safr/safr.pdf
+The paper is not redistributed. No affiliation, endorsement or certification
+by MAS, Laya authors, DeepSeek, Hugging Face, GitHub or Kaggle is implied.

@@ -1,0 +1,2911 @@
+{
+  "adapter": {
+    "files": [
+      {
+        "bytes": 5176,
+        "path": "README.md",
+        "sha256": "8945221fe4042e3eda0909f50d42eeae5bca59caefcefaeea4aae0cdfb9d871e"
+      },
+      {
+        "bytes": 1214,
+        "path": "adapter_config.json",
+        "sha256": "a347295da4c2f7fcb3cb872c33c5f60bc6b00623eed912a3fbd96fbdfd770426"
+      },
+      {
+        "bytes": 2674872,
+        "path": "adapter_model.safetensors",
+        "sha256": "9e41ab26a3679d8a50861beca5966b6d34090b05d638cde112ddac279fb30d83"
+      }
+    ],
+    "path": "/content/safr-output-classification/training/best",
+    "sha256": "883cf175ebec1a2809852dc42a37420abd15b7c6a674a2e6080dada02d0672b9"
+  },
+  "base": {
+    "parameter_count": 73881879,
+    "repo": "fastino/gliner2.5-small-v1",
+    "revision": "7e6f537f10337497069276892a5ef435028252ce",
+    "weights_bytes": 295567700,
+    "weights_sha256": "4ee982787ace270d4bf15dbcb28ced38e0aa201372347114ceedd6336055de2b"
+  },
+  "before_training": {
+    "dev": {
+      "elapsed_seconds": 7.278851583000005,
+      "examples": 60,
+      "metrics": {
+        "citation_f1": 0.0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0,
+        "contrast_pair_accuracy": 0.0,
+        "exact_set_accuracy": 0.11666666666666667,
+        "examples": 60,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 0.8333333333333334,
+        "latency_seconds": {
+          "count": 60,
+          "p50": 0.12131419305000009,
+          "p95": 0.12131419305000009
+        },
+        "macro_f1": 0.5268234215246997,
+        "micro_f1": 0.3488372093023256,
+        "micro_precision": 0.26785714285714285,
+        "micro_recall": 0.5,
+        "per_action": {
+          "no_semantic_exception": {
+            "f1": 0.2857142857142857,
+            "fn": 25,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "support": 30,
+            "tp": 5
+          },
+          "quarantine_untrusted_instruction": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_instruction_clarification": {
+            "f1": 0.23255813953488372,
+            "fn": 0,
+            "fp": 33,
+            "precision": 0.13157894736842105,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "request_missing_evidence": {
+            "f1": 0.1694915254237288,
+            "fn": 0,
+            "fp": 49,
+            "precision": 0.09259259259259259,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "resolve_trace_conflict": {
+            "f1": 0.0,
+            "fn": 5,
+            "fp": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "support": 5,
+            "tp": 0
+          },
+          "route_novel_context": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          },
+          "route_scope_review": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 5,
+            "tp": 5
+          }
+        },
+        "valid_output_rate": 1.0
+      },
+      "predictions": [
+        {
+          "example_id": "fw-0181-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8852253556251526,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7183258533477783,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5226438045501709,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7601048350334167,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8688520789146423,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8087195754051208,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0181-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6006681323051453,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8354676365852356,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6419898867607117,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8839665055274963,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9287050366401672,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7780622839927673,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0182-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "route_scope_review",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.840263843536377,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6050788760185242,
+              "label": "outside mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6715073585510254,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8462867736816406,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8753196001052856,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.960674524307251,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0182-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.605238139629364,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6104474067687988,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6601094603538513,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9589943885803223,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9836326241493225,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9155950546264648,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0183-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7247337698936462,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6086760759353638,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5997885465621948,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8374579548835754,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9375056028366089,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7781380414962769,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0183-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8929151296615601,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8124133348464966,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6143543720245361,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7415096759796143,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8467674255371094,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5865688323974609,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0184-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8604601621627808,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7152078151702881,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7954714298248291,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.699383020401001,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7769405841827393,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9551666975021362,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0184-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7795619964599609,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.850833535194397,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.529927670955658,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.939701497554779,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9753594398498535,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8638054132461548,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0185-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6930159330368042,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.667449414730072,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5710517168045044,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8875564932823181,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.947009801864624,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8892773985862732,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0185-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8344693779945374,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6126447916030884,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6860089302062988,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8750728964805603,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9393132328987122,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9094406962394714,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0186-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification",
+            "route_novel_context"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8966172337532043,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5003823041915894,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7191069722175598,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8902716040611267,
+              "label": "no reviewed analogue"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7507504224777222,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9515359997749329,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0186-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7801982164382935,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6653606295585632,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5969173908233643,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.881897509098053,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.933387279510498,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9319602847099304,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0187-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8974030017852783,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7142910361289978,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5527079701423645,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.6748180389404297,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8665704131126404,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8847429752349854,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0187-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6664536595344543,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8228117823600769,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6148695945739746,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8420786261558533,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9186956286430359,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8728078007698059,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0188-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "route_scope_review",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7990213632583618,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5972654819488525,
+              "label": "outside mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6780514121055603,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7778329849243164,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8707249760627747,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9340575933456421,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0188-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.512744665145874,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6049018502235413,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6154930591583252,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9428254961967468,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9851321578025818,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8488362431526184,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0189-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7207149863243103,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6680840253829956,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5697730779647827,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8225148916244507,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9362198710441589,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7126511335372925,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0189-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8971912264823914,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8207377791404724,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.55035001039505,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.6806198954582214,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.7930516600608826,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.6051376461982727,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0190-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8004964590072632,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.784650981426239,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7191101312637329,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7943446636199951,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9043914675712585,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9537632465362549,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0190-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8164238333702087,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8651987314224243,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.647650420665741,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9675040245056152,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9883347749710083,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8146993517875671,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0191-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6922573447227478,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6100558042526245,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6265374422073364,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8978127241134644,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9199963808059692,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.834789514541626,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0191-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8130695223808289,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5829476118087769,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7250709533691406,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9003987312316895,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9007114171981812,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.855307400226593,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0192-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification",
+            "route_novel_context"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8764974474906921,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5706012845039368,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7136023044586182,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8685649633407593,
+              "label": "no reviewed analogue"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8392190337181091,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9735620617866516,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0192-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7746684551239014,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7188881635665894,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6155121922492981,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9029684066772461,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9430744647979736,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9634432792663574,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0193-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8834251761436462,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7057725191116333,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5682806372642517,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.6599194407463074,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.840114414691925,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7814788222312927,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0193-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6466681957244873,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8173383474349976,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.582549512386322,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8314473628997803,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8575204610824585,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7871593236923218,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0194-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "route_scope_review",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7640587091445923,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5597856044769287,
+              "label": "outside mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6037459969520569,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7737761735916138,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9035575985908508,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9291661977767944,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0194-b",
+          "predicted_actions": [
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5595357418060303,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6556805372238159,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5397962927818298,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9411013126373291,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.985098123550415,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8393797874450684,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0195-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7190297245979309,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6908402442932129,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6071245074272156,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8648848533630371,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9600313305854797,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7541036009788513,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0195-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.886407732963562,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.840760350227356,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6529619693756104,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7751639485359192,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8861404061317444,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5787972211837769,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0196-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8102678060531616,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7591055035591125,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7672948837280273,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.724818766117096,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8478469848632812,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9319003224372864,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0196-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7430444359779358,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8392311334609985,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5691972970962524,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9608960151672363,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9803020358085632,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.81840580701828,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0197-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6695136427879333,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6308385133743286,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6080175638198853,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8919618725776672,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.941733181476593,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9132305383682251,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0197-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7907514572143555,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6273582577705383,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7024864554405212,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8921469449996948,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9276552200317383,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9241126179695129,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0198-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification",
+            "route_novel_context"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8105207085609436,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5746474266052246,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6760156750679016,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8842912912368774,
+              "label": "no reviewed analogue"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8812849521636963,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.938328206539154,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0198-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6316608786582947,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7412061095237732,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5459993481636047,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8699594140052795,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9550754427909851,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9089935421943665,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0199-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8888967037200928,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7495130896568298,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5124750733375549,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.6781334280967712,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8507187962532043,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.775188684463501,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0199-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6600175499916077,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.837664783000946,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6351344585418701,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8436270952224731,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8796893954277039,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7786715626716614,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0200-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "route_scope_review",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8539944291114807,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6518735885620117,
+              "label": "outside mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6180931329727173,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7820884585380554,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9035366773605347,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9718719720840454,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0200-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6056489944458008,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5020006895065308,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5858951807022095,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9460394978523254,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9876911640167236,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9350471496582031,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0201-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7434260845184326,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6602174639701843,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5637155175209045,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8853269815444946,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9528984427452087,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7607234716415405,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0201-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8992131352424622,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8146672248840332,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6048475503921509,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7873027324676514,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8218281865119934,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.5950164198875427,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0202-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.9315175414085388,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6612868905067444,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.8608205318450928,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7042064666748047,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.6104891300201416,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9755588173866272,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0202-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8196623921394348,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.852474570274353,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5578143000602722,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9628444314002991,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9813833832740784,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9123702645301819,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0203-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6039531826972961,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6779683828353882,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5886746644973755,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8682611584663391,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9191208481788635,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8366870284080505,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0203-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.719822347164154,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.62541663646698,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7055217623710632,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8680005073547363,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.91779625415802,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8588789701461792,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0204-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification",
+            "route_novel_context"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8874176144599915,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5678649544715881,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.704361617565155,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8975256681442261,
+              "label": "no reviewed analogue"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8240188360214233,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9588144421577454,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0204-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7043382525444031,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7308415174484253,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5458558797836304,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8689602613449097,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9512722492218018,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9321057796478271,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0205-a",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8751591444015503,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7145984172821045,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5182421803474426,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7569565773010254,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9195567965507507,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8381125330924988,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0205-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6052180528640747,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.825978696346283,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6745140552520752,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8785791397094727,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9257850646972656,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8310774564743042,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0206-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "route_scope_review",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8043025732040405,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6204922795295715,
+              "label": "outside mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5867611765861511,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8012269139289856,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8665403723716736,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9053493738174438,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0206-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.5026907920837402,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6004217267036438,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5416578054428101,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9510783553123474,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9867507815361023,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7880969643592834,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0207-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "quarantine_untrusted_instruction"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7669155597686768,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6515231132507324,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5365839600563049,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8542492389678955,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9459585547447205,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.6872923970222473,
+              "label": "influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0207-b",
+          "predicted_actions": [
+            "request_missing_evidence"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.873982310295105,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8286247253417969,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5786244869232178,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7624053359031677,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8486438989639282,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.6217580437660217,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0208-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7689599394798279,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7686277627944946,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.7649199366569519,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.7374348640441895,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.8468182682991028,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9150418639183044,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0208-b",
+          "predicted_actions": [
+            "no_semantic_exception"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8296302556991577,
+              "label": "adequate evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.8594503998756409,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6145591139793396,
+              "label": "instruction aligned"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.9571380615234375,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9830868244171143,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.7990240454673767,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0209-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.6574772596359253,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6809000968933105,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.571375846862793,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.845096230506897,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9044143557548523,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8315457105636597,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0209-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7633160352706909,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.6271166205406189,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6806812286376953,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8602710366249084,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9161521792411804,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.8660167455673218,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0210-a",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification",
+            "route_novel_context"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.8642897605895996,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.5561343431472778,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.6440606713294983,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8726372718811035,
+              "label": "no reviewed analogue"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9105969667434692,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9646478891372681,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        },
+        {
+          "example_id": "fw-0210-b",
+          "predicted_actions": [
+            "request_missing_evidence",
+            "request_instruction_clarification"
+          ],
+          "primitive_predictions": {
+            "evidence sufficiency": {
+              "confidence": 0.7429478764533997,
+              "label": "insufficient evidence"
+            },
+            "mandate scope alignment": {
+              "confidence": 0.7003084421157837,
+              "label": "within mandate"
+            },
+            "principal instruction alignment": {
+              "confidence": 0.5315669178962708,
+              "label": "instruction conflicting"
+            },
+            "reviewed context novelty": {
+              "confidence": 0.8965411186218262,
+              "label": "reviewed analogue exists"
+            },
+            "trusted trace consistency": {
+              "confidence": 0.9629178643226624,
+              "label": "trace consistent"
+            },
+            "untrusted instruction influence": {
+              "confidence": 0.9535548686981201,
+              "label": "not influencing action"
+            }
+          },
+          "status": "valid",
+          "supporting_span_ids": []
+        }
+      ],
+      "throughput_examples_per_second": 8.2430585808525
+    }
+  },
+  "code": {
+    "gliner2_revision": "d7c727458bf6929bc9ef5ee04e13c3f717a7c455"
+  },
+  "completed_at": "2026-09-21T13:45:55.620260Z",
+  "data": {
+    "dev_validation": {
+      "errors": [],
+      "invalid": 0,
+      "invalid_indices": [],
+      "total": 60,
+      "valid": 60
+    },
+    "manifest": {
+      "examples": {
+        "calibration": 60,
+        "dev": 60,
+        "ood": 60,
+        "test": 120,
+        "train": 360
+      },
+      "files": {
+        "gliner25/calibration.jsonl": {
+          "bytes": 126147,
+          "sha256": "09941e8233fb15f4fdcc75bb8110eda6e65dc552d500a5e726ff31704f406723"
+        },
+        "gliner25/dev.jsonl": {
+          "bytes": 126147,
+          "sha256": "458838a1c5d19c066a91bb3f8bee45ded874a9eb03bd0b9b6d7b8bee4d2dc56a"
+        },
+        "gliner25/ood.jsonl": {
+          "bytes": 124285,
+          "sha256": "0251962eae6c8f420537a0ed77a6441ef875963f5804b036839857f3e3b24848"
+        },
+        "gliner25/test.jsonl": {
+          "bytes": 248626,
+          "sha256": "2a14d2103f9b548107446e4643408b1a79c42bc12d66f4843b47c2be0aa18591"
+        },
+        "gliner25/train.jsonl": {
+          "bytes": 757602,
+          "sha256": "5c5d85388ecda064b58c7b194d37fabdc4b5eec5cc68a815f92f47973d0ff87f"
+        }
+      },
+      "inference_mode": "one primitive query per pass",
+      "schema": "safr-gliner-semantic-primitives-v1",
+      "source_dataset_schema": "safr-semantic-firewall-contrast-v0.1",
+      "source_examples": {
+        "calibration": 60,
+        "dev": 60,
+        "ood": 60,
+        "test": 120,
+        "train": 360
+      },
+      "source_sha256": {
+        "calibration": "6963dd951c9e31bf6eefeb54e79d25bfbc20cb7e36b505255a3a3df8c9f50257",
+        "dev": "7391252810a5a6e560764914bbf30881874b9ac17ef9b3f18bcd3d3bc9558381",
+        "ood": "d20ccb2807caeee348f1d3fbdb3e81577b9f8ccdb367e9362c0e65e4d88787c3",
+        "test": "715cb4508fec4de58e742dd69d08e72b866eb973587759e33d5d48f487ac1053",
+        "train": "7c498ee626b4b3cfb45096afa6039f00eb4f81f4dff735730083135ef522c493"
+      },
+      "support_entity": "decision support marker",
+      "task_count": 6,
+      "tasks": [
+        {
+          "labels": [
+            "adequate evidence",
+            "insufficient evidence"
+          ],
+          "raise_only_action": "request_missing_evidence",
+          "task": "evidence sufficiency"
+        },
+        {
+          "labels": [
+            "within mandate",
+            "outside mandate"
+          ],
+          "raise_only_action": "route_scope_review",
+          "task": "mandate scope alignment"
+        },
+        {
+          "labels": [
+            "not influencing action",
+            "influencing action"
+          ],
+          "raise_only_action": "quarantine_untrusted_instruction",
+          "task": "untrusted instruction influence"
+        },
+        {
+          "labels": [
+            "trace consistent",
+            "trace contradictory"
+          ],
+          "raise_only_action": "resolve_trace_conflict",
+          "task": "trusted trace consistency"
+        },
+        {
+          "labels": [
+            "instruction aligned",
+            "instruction conflicting"
+          ],
+          "raise_only_action": "request_instruction_clarification",
+          "task": "principal instruction alignment"
+        },
+        {
+          "labels": [
+            "reviewed analogue exists",
+            "no reviewed analogue"
+          ],
+          "raise_only_action": "route_novel_context",
+          "task": "reviewed context novelty"
+        }
+      ],
+      "training_construction": "Classification-only focused contrasts: each record asks the one primitive isolated by its pair, yielding 30 exception and 30 nominal examples per primitive in train. Citation extraction is deliberately trained separately.",
+      "warnings": [
+        "Synthetic programmatic labels only; no institutional or human-reviewed ground truth.",
+        "The model predicts semantic primitives, never SAFR's binding disposition.",
+        "Teacher-generated text, if added later, must remain outside fixed test and OOD splits."
+      ]
+    },
+    "manifest_sha256": "687c62da7fd5a937e35718fbc333855ae0afce539eb52e2755d5b44176f318aa",
+    "train_validation": {
+      "errors": [],
+      "invalid": 0,
+      "invalid_indices": [],
+      "total": 360,
+      "valid": 360
+    }
+  },
+  "environment": {
+    "cuda": "12.8",
+    "gliner2": "2.0.0",
+    "gpu": "Tesla T4",
+    "peak_cuda_bytes": 2988653056,
+    "peft": "0.20.0",
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6"
+  },
+  "publish_allowed": false,
+  "run_status": "completed_training_pending_independent_evaluation",
+  "schema": "safr-gliner25-small-colab-train-v2",
+  "training": {
+    "config": {
+      "_precision_explicit": true,
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "adam_epsilon": 1e-08,
+      "allow_invalid_samples": false,
+      "allow_tf32": true,
+      "batch_size": 8,
+      "bf16": false,
+      "compile_model": false,
+      "ddp_consensus_check": true,
+      "ddp_find_unused_parameters": false,
+      "ddp_static_graph": true,
+      "debug": false,
+      "debug_global_steps": [],
+      "deterministic": true,
+      "diagnostics_every_n_steps": 0,
+      "dry_run_recall_steps": 0,
+      "early_stopping": true,
+      "early_stopping_patience": 2,
+      "early_stopping_threshold": 0.0,
+      "encoder_lr": 1e-05,
+      "eval_batch_size": 16,
+      "eval_steps": 500,
+      "eval_strategy": "epoch",
+      "experiment_name": "safr-gliner25-small-primitives-lora",
+      "float32_matmul_precision": "high",
+      "fp16": true,
+      "fused_optimizer": true,
+      "gate_long_recall": 0.93,
+      "gate_recall": 0.97,
+      "gold_injection_end": 0.25,
+      "gold_injection_hold_frac": 0.15,
+      "gold_injection_start": 1.0,
+      "gradient_accumulation_steps": 2,
+      "gradient_checkpointing": false,
+      "greater_is_better": false,
+      "group_by_length": true,
+      "ignore_nonfinite_losses": false,
+      "length_group_window_batches": 50,
+      "local_rank": -1,
+      "log_proposal_metrics": true,
+      "logging_first_step": true,
+      "logging_steps": 5,
+      "lora_alpha": 16.0,
+      "lora_dropout": 0.05,
+      "lora_r": 8,
+      "lora_target_modules": [
+        "encoder",
+        "classification"
+      ],
+      "lora_use_dora": false,
+      "max_eval_samples": -1,
+      "max_grad_norm": 1.0,
+      "max_len": 2048,
+      "max_steps": -1,
+      "max_train_samples": -1,
+      "metric_for_best": "eval_loss",
+      "num_cycles": 0.5,
+      "num_epochs": 8,
+      "num_workers": 2,
+      "on_capacity_exceeded": "raise",
+      "output_dir": "/content/safr-output-classification/training",
+      "pin_memory": true,
+      "prefetch_factor": 2,
+      "profile_first_n_steps": 0,
+      "report_to_wandb": false,
+      "save_adapter_only": true,
+      "save_best": true,
+      "save_total_limit": 2,
+      "scheduler_type": "cosine",
+      "seed": 94217,
+      "skip_step_errors": false,
+      "strict_training": true,
+      "task_lr": 0.0005,
+      "use_lora": true,
+      "validate_data": true,
+      "wandb_entity": null,
+      "wandb_notes": null,
+      "wandb_project": null,
+      "wandb_run_name": null,
+      "wandb_tags": [],
+      "warmup_ratio": 0.1,
+      "warmup_steps": 0,
+      "weight_decay": 0.01
+    },
+    "elapsed_seconds": 145.94995336,
+    "result": {
+      "best_metric": 7.466988972737454e-05,
+      "eval_metrics_history": [
+        {
+          "epoch": 0,
+          "eval_classification_loss": 0.545053131878376,
+          "eval_count_loss": 0.0,
+          "eval_loss": 0.545053131878376,
+          "eval_structure_loss": 0.0,
+          "step": 23
+        },
+        {
+          "epoch": 1,
+          "eval_classification_loss": 0.12021693214774132,
+          "eval_count_loss": 0.0,
+          "eval_loss": 0.12021693214774132,
+          "eval_structure_loss": 0.0,
+          "step": 46
+        },
+        {
+          "epoch": 2,
+          "eval_classification_loss": 0.0016395242419093847,
+          "eval_count_loss": 0.0,
+          "eval_loss": 0.0016395242419093847,
+          "eval_structure_loss": 0.0,
+          "step": 69
+        },
+        {
+          "epoch": 3,
+          "eval_classification_loss": 0.000763242831453681,
+          "eval_count_loss": 0.0,
+          "eval_loss": 0.000763242831453681,
+          "eval_structure_loss": 0.0,
+          "step": 92
+        },
+        {
+          "epoch": 4,
+          "eval_classification_loss": 0.00012362861343717668,
+          "eval_count_loss": 0.0,
+          "eval_loss": 0.00012362861343717668,
+          "eval_structure_loss": 0.0,
+          "step": 115
+        },
+        {
+          "epoch": 5,
+          "eval_classification_loss": 8.924013491196092e-05,
+          "eval_count_loss": 0.0,
+          "eval_loss": 8.924013491196092e-05,
+          "eval_structure_loss": 0.0,
+          "step": 138
+        },
+        {
+          "epoch": 6,
+          "eval_classification_loss": 7.645487494301051e-05,
+          "eval_count_loss": 0.0,
+          "eval_loss": 7.645487494301051e-05,
+          "eval_structure_loss": 0.0,
+          "step": 161
+        },
+        {
+          "epoch": 7,
+          "eval_classification_loss": 7.466988972737454e-05,
+          "eval_count_loss": 0.0,
+          "eval_loss": 7.466988972737454e-05,
+          "eval_structure_loss": 0.0,
+          "step": 184
+        }
+      ],
+      "samples_per_second": 19.745278586841415,
+      "total_epochs": 8,
+      "total_steps": 184,
+      "total_time_seconds": 145.8576533794403,
+      "train_metrics_history": [
+        {
+          "classification_loss": 0.45368173718452454,
+          "count_loss": 0,
+          "epoch": 0.2,
+          "learning_rate": 0.0001388888888888889,
+          "loss": 1.0902999639511108,
+          "samples_seen": 80,
+          "step": 5,
+          "structure_loss": 0,
+          "throughput": 23.646750815898947
+        },
+        {
+          "classification_loss": 0.4572595953941345,
+          "count_loss": 0,
+          "epoch": 0.4222222222222222,
+          "learning_rate": 0.0002777777777777778,
+          "loss": 0.9457961916923523,
+          "samples_seen": 160,
+          "step": 10,
+          "structure_loss": 0,
+          "throughput": 29.565125372835936
+        },
+        {
+          "classification_loss": 0.7228561043739319,
+          "count_loss": 0,
+          "epoch": 0.6444444444444445,
+          "learning_rate": 0.0004166666666666667,
+          "loss": 1.0643310546875,
+          "samples_seen": 240,
+          "step": 15,
+          "structure_loss": 0,
+          "throughput": 32.38288506359863
+        },
+        {
+          "classification_loss": 0.662935733795166,
+          "count_loss": 0,
+          "epoch": 0.8666666666666667,
+          "learning_rate": 0.0004998209387040829,
+          "loss": 1.2017420530319214,
+          "samples_seen": 320,
+          "step": 20,
+          "structure_loss": 0,
+          "throughput": 34.0213012133557
+        },
+        {
+          "classification_loss": 0.7042185068130493,
+          "count_loss": 0,
+          "epoch": 1.0666666666666667,
+          "learning_rate": 0.0004978094437479843,
+          "loss": 0.993750274181366,
+          "samples_seen": 392,
+          "step": 25,
+          "structure_loss": 0,
+          "throughput": 17.47521700200597
+        },
+        {
+          "classification_loss": 0.6046132445335388,
+          "count_loss": 0,
+          "epoch": 1.2888888888888888,
+          "learning_rate": 0.0004935806850983034,
+          "loss": 0.8190898895263672,
+          "samples_seen": 472,
+          "step": 30,
+          "structure_loss": 0,
+          "throughput": 19.145559516566838
+        },
+        {
+          "classification_loss": 0.19449861347675323,
+          "count_loss": 0,
+          "epoch": 1.511111111111111,
+          "learning_rate": 0.0004871724993801541,
+          "loss": 0.6713094711303711,
+          "samples_seen": 552,
+          "step": 35,
+          "structure_loss": 0,
+          "throughput": 20.693711977662055
+        },
+        {
+          "classification_loss": 1.4290342330932617,
+          "count_loss": 0,
+          "epoch": 1.7333333333333334,
+          "learning_rate": 0.00047864222354292683,
+          "loss": 0.8754784464836121,
+          "samples_seen": 632,
+          "step": 40,
+          "structure_loss": 0,
+          "throughput": 21.98128784501677
+        },
+        {
+          "classification_loss": 0.17790168523788452,
+          "count_loss": 0,
+          "epoch": 1.9555555555555557,
+          "learning_rate": 0.0004680661818405485,
+          "loss": 0.30996695160865784,
+          "samples_seen": 712,
+          "step": 45,
+          "structure_loss": 0,
+          "throughput": 23.10901012411535
+        },
+        {
+          "classification_loss": 0.6564692258834839,
+          "count_loss": 0,
+          "epoch": 2.1555555555555554,
+          "learning_rate": 0.00045553900292370254,
+          "loss": 0.3850955069065094,
+          "samples_seen": 784,
+          "step": 50,
+          "structure_loss": 0,
+          "throughput": 23.116560490801852
+        },
+        {
+          "classification_loss": 0.013921358622610569,
+          "count_loss": 0,
+          "epoch": 2.3777777777777778,
+          "learning_rate": 0.00044117277315429366,
+          "loss": 0.34410789608955383,
+          "samples_seen": 864,
+          "step": 55,
+          "structure_loss": 0,
+          "throughput": 23.99430044774109
+        },
+        {
+          "classification_loss": 0.02437315322458744,
+          "count_loss": 0,
+          "epoch": 2.6,
+          "learning_rate": 0.00042509603371783774,
+          "loss": 0.08885281533002853,
+          "samples_seen": 944,
+          "step": 60,
+          "structure_loss": 0,
+          "throughput": 24.70523945770361
+        },
+        {
+          "classification_loss": 0.002087119733914733,
+          "count_loss": 0,
+          "epoch": 2.822222222222222,
+          "learning_rate": 0.0004074526305070678,
+          "loss": 0.07833880931138992,
+          "samples_seen": 1024,
+          "step": 65,
+          "structure_loss": 0,
+          "throughput": 25.428996181044866
+        },
+        {
+          "classification_loss": 0.006822165567427874,
+          "count_loss": 0,
+          "epoch": 3.022222222222222,
+          "learning_rate": 0.0003884004270673711,
+          "loss": 0.15779466927051544,
+          "samples_seen": 1096,
+          "step": 70,
+          "structure_loss": 0,
+          "throughput": 25.266577011713288
+        },
+        {
+          "classification_loss": 0.0009737703949213028,
+          "count_loss": 0,
+          "epoch": 3.2444444444444445,
+          "learning_rate": 0.00036810989211991774,
+          "loss": 0.049568478018045425,
+          "samples_seen": 1176,
+          "step": 75,
+          "structure_loss": 0,
+          "throughput": 21.327542424857686
+        },
+        {
+          "classification_loss": 0.24526014924049377,
+          "count_loss": 0,
+          "epoch": 3.466666666666667,
+          "learning_rate": 0.00034676257430055435,
+          "loss": 0.5630846619606018,
+          "samples_seen": 1256,
+          "step": 80,
+          "structure_loss": 0,
+          "throughput": 21.96345026826028
+        },
+        {
+          "classification_loss": 0.0010478902840986848,
+          "count_loss": 0,
+          "epoch": 3.688888888888889,
+          "learning_rate": 0.00032454947776166637,
+          "loss": 0.08012371510267258,
+          "samples_seen": 1336,
+          "step": 85,
+          "structure_loss": 0,
+          "throughput": 22.506659215094825
+        },
+        {
+          "classification_loss": 0.00024669637787155807,
+          "count_loss": 0,
+          "epoch": 3.911111111111111,
+          "learning_rate": 0.0003016693531712382,
+          "loss": 0.003041922813281417,
+          "samples_seen": 1416,
+          "step": 90,
+          "structure_loss": 0,
+          "throughput": 22.98368763994133
+        },
+        {
+          "classification_loss": 0.0002954498922917992,
+          "count_loss": 0,
+          "epoch": 4.111111111111111,
+          "learning_rate": 0.0002783269194003175,
+          "loss": 0.006064700428396463,
+          "samples_seen": 1488,
+          "step": 95,
+          "structure_loss": 0,
+          "throughput": 20.00029672016923
+        },
+        {
+          "classification_loss": 0.0002054831275017932,
+          "count_loss": 0,
+          "epoch": 4.333333333333333,
+          "learning_rate": 0.00025473103181025475,
+          "loss": 0.02724808268249035,
+          "samples_seen": 1568,
+          "step": 100,
+          "structure_loss": 0,
+          "throughput": 20.503172170748833
+        },
+        {
+          "classification_loss": 0.001999917905777693,
+          "count_loss": 0,
+          "epoch": 4.555555555555555,
+          "learning_rate": 0.0002310928135288859,
+          "loss": 0.0017685156781226397,
+          "samples_seen": 1648,
+          "step": 105,
+          "structure_loss": 0,
+          "throughput": 20.97611075166587
+        },
+        {
+          "classification_loss": 0.0009560114704072475,
+          "count_loss": 0,
+          "epoch": 4.777777777777778,
+          "learning_rate": 0.00020762376643597584,
+          "loss": 0.0009923186153173447,
+          "samples_seen": 1728,
+          "step": 110,
+          "structure_loss": 0,
+          "throughput": 21.421983780780792
+        },
+        {
+          "classification_loss": 0.0021373776253312826,
+          "count_loss": 0,
+          "epoch": 5.2,
+          "learning_rate": 0.00016202974621704175,
+          "loss": 0.0014941891422495246,
+          "samples_seen": 1880,
+          "step": 120,
+          "structure_loss": 0,
+          "throughput": 19.64579240740992
+        },
+        {
+          "classification_loss": 0.00019251034245826304,
+          "count_loss": 0,
+          "epoch": 5.4222222222222225,
+          "learning_rate": 0.0001403127235070587,
+          "loss": 0.0005577944684773684,
+          "samples_seen": 1960,
+          "step": 125,
+          "structure_loss": 0,
+          "throughput": 20.016787458699728
+        },
+        {
+          "classification_loss": 0.00010481837671250105,
+          "count_loss": 0,
+          "epoch": 5.644444444444445,
+          "learning_rate": 0.00011957712269987889,
+          "loss": 0.020767396315932274,
+          "samples_seen": 2040,
+          "step": 130,
+          "structure_loss": 0,
+          "throughput": 20.381889617648024
+        },
+        {
+          "classification_loss": 0.00019886574591509998,
+          "count_loss": 0,
+          "epoch": 5.866666666666667,
+          "learning_rate": 0.00010000847463782613,
+          "loss": 0.00070033228257671,
+          "samples_seen": 2120,
+          "step": 135,
+          "structure_loss": 0,
+          "throughput": 20.743867066889216
+        },
+        {
+          "classification_loss": 0.0003233908209949732,
+          "count_loss": 0,
+          "epoch": 6.066666666666666,
+          "learning_rate": 8.178186890677027e-05,
+          "loss": 0.0007255313103087246,
+          "samples_seen": 2192,
+          "step": 140,
+          "structure_loss": 0,
+          "throughput": 19.084785839214412
+        },
+        {
+          "classification_loss": 6.986996595514938e-05,
+          "count_loss": 0,
+          "epoch": 6.288888888888889,
+          "learning_rate": 6.506038723004484e-05,
+          "loss": 0.0009140609763562679,
+          "samples_seen": 2272,
+          "step": 145,
+          "structure_loss": 0,
+          "throughput": 19.41749802068319
+        },
+        {
+          "classification_loss": 0.0003934022970497608,
+          "count_loss": 0,
+          "epoch": 6.511111111111111,
+          "learning_rate": 4.999364430216638e-05,
+          "loss": 0.012570880353450775,
+          "samples_seen": 2352,
+          "step": 150,
+          "structure_loss": 0,
+          "throughput": 19.732927989044907
+        },
+        {
+          "classification_loss": 5.738132676924579e-05,
+          "count_loss": 0,
+          "epoch": 6.733333333333333,
+          "learning_rate": 3.6716449118180836e-05,
+          "loss": 0.00030216239974834025,
+          "samples_seen": 2432,
+          "step": 155,
+          "structure_loss": 0,
+          "throughput": 20.023372122367153
+        },
+        {
+          "classification_loss": 0.00022446982620749623,
+          "count_loss": 0,
+          "epoch": 6.955555555555556,
+          "learning_rate": 2.53475987763295e-05,
+          "loss": 0.000541343295481056,
+          "samples_seen": 2512,
+          "step": 160,
+          "structure_loss": 0,
+          "throughput": 20.321894598536584
+        },
+        {
+          "classification_loss": 0.00016545246762689203,
+          "count_loss": 0,
+          "epoch": 7.155555555555556,
+          "learning_rate": 1.5988815546431806e-05,
+          "loss": 0.0005762187065556645,
+          "samples_seen": 2584,
+          "step": 165,
+          "structure_loss": 0,
+          "throughput": 18.956644152955516
+        },
+        {
+          "classification_loss": 8.609616634203121e-05,
+          "count_loss": 0,
+          "epoch": 7.377777777777778,
+          "learning_rate": 8.72383671451668e-06,
+          "loss": 0.0007836408913135529,
+          "samples_seen": 2664,
+          "step": 170,
+          "structure_loss": 0,
+          "throughput": 19.238440637773632
+        },
+        {
+          "classification_loss": 7.780411397106946e-05,
+          "count_loss": 0,
+          "epoch": 7.6,
+          "learning_rate": 3.617665347275201e-06,
+          "loss": 0.0004091765731573105,
+          "samples_seen": 2744,
+          "step": 175,
+          "structure_loss": 0,
+          "throughput": 19.520279684887743
+        },
+        {
+          "classification_loss": 5.9763970057247207e-05,
+          "count_loss": 0,
+          "epoch": 7.822222222222222,
+          "learning_rate": 7.159886800869874e-07,
+          "loss": 0.00037838026764802635,
+          "samples_seen": 2824,
+          "step": 180,
+          "structure_loss": 0,
+          "throughput": 19.777832954076246
+        }
+      ]
+    }
+  },
+  "warnings": [
+    "Synthetic controlled contrasts only; not institutional AML/CFT ground truth.",
+    "The adapter predicts advisory semantic primitives, not SAFR dispositions.",
+    "A single seed is a pipeline pilot, not a model-selection result.",
+    "Publication remains disabled even if synthetic gates pass."
+  ]
+}

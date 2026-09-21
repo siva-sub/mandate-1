@@ -1,0 +1,725 @@
+{
+  "schema": "safr-same-data-ngram-baseline-v1",
+  "train_rows": 720,
+  "train_sha256": "5a2d4d3d09e8d74d7037cb8bc65be0044130f27b8211697034cc29738bb04733",
+  "results": {
+    "test": {
+      "metrics": {
+        "examples": 120,
+        "valid_output_rate": 1.0,
+        "exact_set_accuracy": 0.5,
+        "micro_precision": 0.5,
+        "micro_recall": 0.5,
+        "micro_f1": 0.5,
+        "macro_f1": 0.5714285714285714,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 1.0,
+        "citation_precision": 0.5,
+        "citation_recall": 0.35135135135135137,
+        "citation_f1": 0.41269841269841273,
+        "contrast_pair_accuracy": 0.0,
+        "per_action": {
+          "no_semantic_exception": {
+            "support": 60,
+            "tp": 0,
+            "fp": 0,
+            "fn": 60,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "request_missing_evidence": {
+            "support": 10,
+            "tp": 10,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "route_scope_review": {
+            "support": 10,
+            "tp": 10,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "quarantine_untrusted_instruction": {
+            "support": 10,
+            "tp": 10,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "resolve_trace_conflict": {
+            "support": 10,
+            "tp": 10,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "request_instruction_clarification": {
+            "support": 10,
+            "tp": 10,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "route_novel_context": {
+            "support": 10,
+            "tp": 10,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "predictions": {
+        "fw-0241-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0241-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0242-a": [
+          "route_scope_review"
+        ],
+        "fw-0242-b": [
+          "route_scope_review"
+        ],
+        "fw-0243-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0243-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0244-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0244-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0245-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0245-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0246-a": [
+          "route_novel_context"
+        ],
+        "fw-0246-b": [
+          "route_novel_context"
+        ],
+        "fw-0247-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0247-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0248-a": [
+          "route_scope_review"
+        ],
+        "fw-0248-b": [
+          "route_scope_review"
+        ],
+        "fw-0249-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0249-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0250-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0250-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0251-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0251-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0252-a": [
+          "route_novel_context"
+        ],
+        "fw-0252-b": [
+          "route_novel_context"
+        ],
+        "fw-0253-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0253-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0254-a": [
+          "route_scope_review"
+        ],
+        "fw-0254-b": [
+          "route_scope_review"
+        ],
+        "fw-0255-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0255-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0256-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0256-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0257-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0257-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0258-a": [
+          "route_novel_context"
+        ],
+        "fw-0258-b": [
+          "route_novel_context"
+        ],
+        "fw-0259-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0259-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0260-a": [
+          "route_scope_review"
+        ],
+        "fw-0260-b": [
+          "route_scope_review"
+        ],
+        "fw-0261-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0261-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0262-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0262-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0263-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0263-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0264-a": [
+          "route_novel_context"
+        ],
+        "fw-0264-b": [
+          "route_novel_context"
+        ],
+        "fw-0265-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0265-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0266-a": [
+          "route_scope_review"
+        ],
+        "fw-0266-b": [
+          "route_scope_review"
+        ],
+        "fw-0267-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0267-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0268-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0268-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0269-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0269-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0270-a": [
+          "route_novel_context"
+        ],
+        "fw-0270-b": [
+          "route_novel_context"
+        ],
+        "fw-0271-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0271-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0272-a": [
+          "route_scope_review"
+        ],
+        "fw-0272-b": [
+          "route_scope_review"
+        ],
+        "fw-0273-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0273-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0274-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0274-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0275-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0275-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0276-a": [
+          "route_novel_context"
+        ],
+        "fw-0276-b": [
+          "route_novel_context"
+        ],
+        "fw-0277-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0277-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0278-a": [
+          "route_scope_review"
+        ],
+        "fw-0278-b": [
+          "route_scope_review"
+        ],
+        "fw-0279-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0279-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0280-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0280-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0281-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0281-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0282-a": [
+          "route_novel_context"
+        ],
+        "fw-0282-b": [
+          "route_novel_context"
+        ],
+        "fw-0283-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0283-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0284-a": [
+          "route_scope_review"
+        ],
+        "fw-0284-b": [
+          "route_scope_review"
+        ],
+        "fw-0285-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0285-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0286-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0286-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0287-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0287-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0288-a": [
+          "route_novel_context"
+        ],
+        "fw-0288-b": [
+          "route_novel_context"
+        ],
+        "fw-0289-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0289-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0290-a": [
+          "route_scope_review"
+        ],
+        "fw-0290-b": [
+          "route_scope_review"
+        ],
+        "fw-0291-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0291-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0292-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0292-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0293-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0293-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0294-a": [
+          "route_novel_context"
+        ],
+        "fw-0294-b": [
+          "route_novel_context"
+        ],
+        "fw-0295-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0295-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0296-a": [
+          "route_scope_review"
+        ],
+        "fw-0296-b": [
+          "route_scope_review"
+        ],
+        "fw-0297-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0297-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0298-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0298-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0299-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0299-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0300-a": [
+          "route_novel_context"
+        ],
+        "fw-0300-b": [
+          "route_novel_context"
+        ]
+      }
+    },
+    "ood": {
+      "metrics": {
+        "examples": 60,
+        "valid_output_rate": 1.0,
+        "exact_set_accuracy": 0.5,
+        "micro_precision": 0.5,
+        "micro_recall": 0.5,
+        "micro_f1": 0.5,
+        "macro_f1": 0.5714285714285714,
+        "false_clear_rate": 0.0,
+        "false_hold_rate": 1.0,
+        "citation_precision": 0.5,
+        "citation_recall": 0.35135135135135137,
+        "citation_f1": 0.41269841269841273,
+        "contrast_pair_accuracy": 0.0,
+        "per_action": {
+          "no_semantic_exception": {
+            "support": 30,
+            "tp": 0,
+            "fp": 0,
+            "fn": 30,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "request_missing_evidence": {
+            "support": 5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "route_scope_review": {
+            "support": 5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "quarantine_untrusted_instruction": {
+            "support": 5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "resolve_trace_conflict": {
+            "support": 5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "request_instruction_clarification": {
+            "support": 5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "route_novel_context": {
+            "support": 5,
+            "tp": 5,
+            "fp": 5,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "latency_seconds": {
+          "count": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "predictions": {
+        "fw-0301-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0301-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0302-a": [
+          "route_scope_review"
+        ],
+        "fw-0302-b": [
+          "route_scope_review"
+        ],
+        "fw-0303-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0303-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0304-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0304-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0305-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0305-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0306-a": [
+          "route_novel_context"
+        ],
+        "fw-0306-b": [
+          "route_novel_context"
+        ],
+        "fw-0307-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0307-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0308-a": [
+          "route_scope_review"
+        ],
+        "fw-0308-b": [
+          "route_scope_review"
+        ],
+        "fw-0309-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0309-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0310-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0310-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0311-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0311-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0312-a": [
+          "route_novel_context"
+        ],
+        "fw-0312-b": [
+          "route_novel_context"
+        ],
+        "fw-0313-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0313-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0314-a": [
+          "route_scope_review"
+        ],
+        "fw-0314-b": [
+          "route_scope_review"
+        ],
+        "fw-0315-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0315-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0316-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0316-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0317-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0317-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0318-a": [
+          "route_novel_context"
+        ],
+        "fw-0318-b": [
+          "route_novel_context"
+        ],
+        "fw-0319-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0319-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0320-a": [
+          "route_scope_review"
+        ],
+        "fw-0320-b": [
+          "route_scope_review"
+        ],
+        "fw-0321-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0321-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0322-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0322-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0323-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0323-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0324-a": [
+          "route_novel_context"
+        ],
+        "fw-0324-b": [
+          "route_novel_context"
+        ],
+        "fw-0325-a": [
+          "request_missing_evidence"
+        ],
+        "fw-0325-b": [
+          "request_missing_evidence"
+        ],
+        "fw-0326-a": [
+          "route_scope_review"
+        ],
+        "fw-0326-b": [
+          "route_scope_review"
+        ],
+        "fw-0327-a": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0327-b": [
+          "quarantine_untrusted_instruction"
+        ],
+        "fw-0328-a": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0328-b": [
+          "resolve_trace_conflict"
+        ],
+        "fw-0329-a": [
+          "request_instruction_clarification"
+        ],
+        "fw-0329-b": [
+          "request_instruction_clarification"
+        ],
+        "fw-0330-a": [
+          "route_novel_context"
+        ],
+        "fw-0330-b": [
+          "route_novel_context"
+        ]
+      }
+    }
+  }
+}

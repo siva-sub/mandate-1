@@ -1,0 +1,2523 @@
+{
+  "data": {
+    "dataset_path": "data/safr-semantic-firewall-v0.1/dataset/test.jsonl",
+    "dataset_sha256": "715cb4508fec4de58e742dd69d08e72b866eb973587759e33d5d48f487ac1053",
+    "examples": 120,
+    "needle_path": "data/safr-semantic-firewall-v0.1/needle/test.jsonl",
+    "needle_sha256": "0a1f137020baf256d45b23fe982df6f45d8da70aff9dfd98f0f3e4f1f54629d2",
+    "split": "test",
+    "truncated_by_max_examples": false
+  },
+  "metrics": {
+    "citation_f1": 0.15010141987829614,
+    "citation_precision": 0.3008130081300813,
+    "citation_recall": 0.1,
+    "contrast_pair_accuracy": 0.03333333333333333,
+    "exact_set_accuracy": 0.14166666666666666,
+    "examples": 120,
+    "false_clear_rate": 0.6166666666666667,
+    "false_hold_rate": 0.06666666666666667,
+    "latency_seconds": {
+      "count": 120,
+      "p50": 2.1796968940179795,
+      "p95": 3.5241159849974792
+    },
+    "macro_f1": 0.24577182224241048,
+    "micro_f1": 0.3217391304347826,
+    "micro_precision": 0.33636363636363636,
+    "micro_recall": 0.30833333333333335,
+    "per_action": {
+      "no_semantic_exception": {
+        "f1": 0.4,
+        "fn": 45,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.25,
+        "support": 60,
+        "tp": 15
+      },
+      "quarantine_untrusted_instruction": {
+        "f1": 0.0,
+        "fn": 10,
+        "fp": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 10,
+        "tp": 0
+      },
+      "request_instruction_clarification": {
+        "f1": 0.4666666666666667,
+        "fn": 3,
+        "fp": 13,
+        "precision": 0.35,
+        "recall": 0.7,
+        "support": 10,
+        "tp": 7
+      },
+      "request_missing_evidence": {
+        "f1": 0.32432432432432434,
+        "fn": 4,
+        "fp": 21,
+        "precision": 0.2222222222222222,
+        "recall": 0.6,
+        "support": 10,
+        "tp": 6
+      },
+      "resolve_trace_conflict": {
+        "f1": 0.47058823529411764,
+        "fn": 2,
+        "fp": 16,
+        "precision": 0.3333333333333333,
+        "recall": 0.8,
+        "support": 10,
+        "tp": 8
+      },
+      "route_novel_context": {
+        "f1": 0.058823529411764705,
+        "fn": 9,
+        "fp": 23,
+        "precision": 0.041666666666666664,
+        "recall": 0.1,
+        "support": 10,
+        "tp": 1
+      },
+      "route_scope_review": {
+        "f1": 0.0,
+        "fn": 10,
+        "fp": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 10,
+        "tp": 0
+      }
+    },
+    "valid_output_rate": 0.35
+  },
+  "model": {
+    "cactus_needle_version": "3.0.4",
+    "id": "mandate1-firewall-needle3-20l",
+    "native_library_sha256": "978fce130aac08af506b5fe8bb2950da58e9479d0de69d972d9bd69db953568d",
+    "revision": "9626c42dcc44",
+    "telemetry_disabled": true,
+    "weights_bytes": 63437076,
+    "weights_path": "artifacts/mandate1-firewall-v0.1/mandate1-firewall-needle3-20l.cact",
+    "weights_sha256": "9626c42dcc44ad54da8a4794bd2c829c422e76353d9b8bb176c258bd22c9da17"
+  },
+  "observed_at": "2026-09-21T10:43:41.137993Z",
+  "predictions": [
+    {
+      "call_count": 3,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0241-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 2.804318529990269,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0241-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 2.185282977006864,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0242-a",
+      "findings": [],
+      "latency_seconds": 2.245840274001239,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0242-b",
+      "findings": [],
+      "latency_seconds": 2.335655413015047,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0243-a",
+      "findings": [],
+      "latency_seconds": 2.6886404659890104,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0243-b",
+      "findings": [],
+      "latency_seconds": 2.4568220039946027,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0244-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.3323490809998475,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0244-b",
+      "findings": [],
+      "latency_seconds": 2.151387585006887,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0245-a",
+      "findings": [],
+      "latency_seconds": 2.137349872995401,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0245-b",
+      "findings": [],
+      "latency_seconds": 1.9106224369897973,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0246-a",
+      "findings": [],
+      "latency_seconds": 2.4143109249998815,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0246-b",
+      "findings": [],
+      "latency_seconds": 2.1093636869918555,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0247-a",
+      "findings": [],
+      "latency_seconds": 1.9202210350194946,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0247-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7884355320129544,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0248-a",
+      "findings": [],
+      "latency_seconds": 2.111007191997487,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0248-b",
+      "findings": [],
+      "latency_seconds": 2.1013449339952786,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0249-a",
+      "findings": [],
+      "latency_seconds": 2.534094747999916,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0249-b",
+      "findings": [],
+      "latency_seconds": 2.2475958339928184,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0250-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.2254193300032057,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0250-b",
+      "findings": [],
+      "latency_seconds": 2.0636121619900223,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0251-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.2410580040013883,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0251-b",
+      "findings": [],
+      "latency_seconds": 2.146278528001858,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0252-a",
+      "findings": [],
+      "latency_seconds": 2.1201589349948335,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0252-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 1.620769544999348,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0253-a",
+      "findings": [],
+      "latency_seconds": 2.5991181019926444,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0253-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.8076736869988963,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0254-a",
+      "findings": [],
+      "latency_seconds": 1.9604749270074535,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0254-b",
+      "findings": [],
+      "latency_seconds": 1.912053375999676,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0255-a",
+      "findings": [],
+      "latency_seconds": 2.315254073997494,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0255-b",
+      "findings": [],
+      "latency_seconds": 2.1944271069951355,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0256-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.1779370440053754,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0256-b",
+      "findings": [],
+      "latency_seconds": 3.2426847809983883,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "abstained",
+      "suppressed_call_count": 4,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0257-a",
+      "findings": [],
+      "latency_seconds": 2.1000783649797086,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0257-b",
+      "findings": [],
+      "latency_seconds": 1.9918211130134296,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0258-a",
+      "findings": [],
+      "latency_seconds": 2.2501509209978394,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0258-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 1.6275477960007265,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 3,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0259-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 2.7198847540130373,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0259-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7815892210055608,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0260-a",
+      "findings": [],
+      "latency_seconds": 2.2733077660086565,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0260-b",
+      "findings": [],
+      "latency_seconds": 2.2630809160182253,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0261-a",
+      "findings": [],
+      "latency_seconds": 2.2906745939981192,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0261-b",
+      "findings": [],
+      "latency_seconds": 2.13127160599106,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0262-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.648915527999634,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0262-b",
+      "findings": [],
+      "latency_seconds": 3.8859558849944733,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "abstained",
+      "suppressed_call_count": 4,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0263-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 5.5481663109967485,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0263-b",
+      "findings": [],
+      "latency_seconds": 2.180574612983037,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0264-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        }
+      ],
+      "latency_seconds": 3.2293126549921,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0264-b",
+      "findings": [],
+      "latency_seconds": 1.9932150569802616,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0265-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7860709009983111,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0265-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "history"
+          ]
+        }
+      ],
+      "latency_seconds": 2.019543408998288,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0266-a",
+      "findings": [],
+      "latency_seconds": 2.2280464450013824,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0266-b",
+      "findings": [],
+      "latency_seconds": 2.134040286997333,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0267-a",
+      "findings": [],
+      "latency_seconds": 2.4260073770128656,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0267-b",
+      "findings": [],
+      "latency_seconds": 2.133625671995105,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0268-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.374983732996043,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0268-b",
+      "findings": [],
+      "latency_seconds": 1.9666489879891742,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0269-a",
+      "findings": [],
+      "latency_seconds": 2.1458266230183654,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0269-b",
+      "findings": [],
+      "latency_seconds": 2.100624721002532,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0270-a",
+      "findings": [],
+      "latency_seconds": 2.312201725988416,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0270-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "instruction",
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7719832099974155,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 3,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0271-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 2.707385561981937,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0271-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7686023380083498,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0272-a",
+      "findings": [],
+      "latency_seconds": 2.0757163499947637,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0272-b",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.433534297015285,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0273-a",
+      "findings": [],
+      "latency_seconds": 2.1796968940179795,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0273-b",
+      "findings": [],
+      "latency_seconds": 2.25542703300016,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0274-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.7726658530009445,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0274-b",
+      "findings": [],
+      "latency_seconds": 2.038055301993154,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0275-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 3.246219435997773,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0275-b",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "history"
+          ]
+        }
+      ],
+      "latency_seconds": 3.231483790994389,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0276-a",
+      "findings": [],
+      "latency_seconds": 1.9731991610024124,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0276-b",
+      "findings": [],
+      "latency_seconds": 2.1716213510080706,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0277-a",
+      "findings": [],
+      "latency_seconds": 2.182386248023249,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0277-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7575596229871735,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0278-a",
+      "findings": [],
+      "latency_seconds": 2.017116586997872,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0278-b",
+      "findings": [],
+      "latency_seconds": 2.0643928829813376,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0279-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        }
+      ],
+      "latency_seconds": 1.8255693330138456,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0279-b",
+      "findings": [],
+      "latency_seconds": 2.1509680800081696,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0280-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.232651861006161,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0280-b",
+      "findings": [],
+      "latency_seconds": 2.170788660994731,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0281-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.680760499992175,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0281-b",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "evidence-1"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 3.226123200991424,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0282-a",
+      "findings": [],
+      "latency_seconds": 2.2543163640075363,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0282-b",
+      "findings": [],
+      "latency_seconds": 2.221073510008864,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0283-a",
+      "findings": [],
+      "latency_seconds": 2.017451035004342,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0283-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.758608212985564,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0284-a",
+      "findings": [],
+      "latency_seconds": 2.0547731799888425,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0284-b",
+      "findings": [],
+      "latency_seconds": 2.214367990993196,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0285-a",
+      "findings": [],
+      "latency_seconds": 2.046257396985311,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0285-b",
+      "findings": [],
+      "latency_seconds": 2.229767651995644,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0286-a",
+      "findings": [],
+      "latency_seconds": 2.0400558639958035,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0286-b",
+      "findings": [],
+      "latency_seconds": 3.2043697070039343,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "abstained",
+      "suppressed_call_count": 4,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0287-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.50880372300162,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0287-b",
+      "findings": [],
+      "latency_seconds": 3.816288154979702,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0288-a",
+      "findings": [],
+      "latency_seconds": 3.213638090994209,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0288-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "evidence-1",
+            "history"
+          ]
+        }
+      ],
+      "latency_seconds": 1.805714704998536,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0289-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7414907550264616,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0289-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "history"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7547579950187355,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0290-a",
+      "findings": [],
+      "latency_seconds": 2.2608032469870523,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0290-b",
+      "findings": [],
+      "latency_seconds": 2.2666571229929104,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0291-a",
+      "findings": [],
+      "latency_seconds": 2.062835401011398,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0291-b",
+      "findings": [],
+      "latency_seconds": 2.142146183003206,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0292-a",
+      "findings": [],
+      "latency_seconds": 2.0410781969840173,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0292-b",
+      "findings": [],
+      "latency_seconds": 3.1782056390075013,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "abstained",
+      "suppressed_call_count": 4,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0293-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.2308162649860606,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0293-b",
+      "findings": [],
+      "latency_seconds": 2.156213343027048,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0294-a",
+      "findings": [],
+      "latency_seconds": 2.035565311991377,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0294-b",
+      "findings": [],
+      "latency_seconds": 2.1254330879892223,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 3,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0295-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "action"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 2.7547210560005624,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0295-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "action",
+            "trace-2"
+          ]
+        }
+      ],
+      "latency_seconds": 1.7842734819860198,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 1,
+      "suppressed_clean_noop": true
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0296-a",
+      "findings": [],
+      "latency_seconds": 2.2171061510161962,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0296-b",
+      "findings": [],
+      "latency_seconds": 2.103996239020489,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0297-a",
+      "findings": [],
+      "latency_seconds": 2.197472227999242,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0297-b",
+      "findings": [],
+      "latency_seconds": 2.1711981219996233,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0298-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.2377100470184814,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0298-b",
+      "findings": [],
+      "latency_seconds": 2.2037218309997115,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0299-a",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.5241159849974792,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 4,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0299-b",
+      "findings": [
+        {
+          "control_action": "request_missing_evidence",
+          "supporting_span_ids": [
+            "mandate"
+          ]
+        },
+        {
+          "control_action": "route_novel_context",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "resolve_trace_conflict",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        },
+        {
+          "control_action": "request_instruction_clarification",
+          "supporting_span_ids": [
+            "instruction"
+          ]
+        }
+      ],
+      "latency_seconds": 3.2689854060008656,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 0,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0300-a",
+      "findings": [],
+      "latency_seconds": 1.9619376019982155,
+      "reasoning_retained": false,
+      "response_error_code": "truncated",
+      "response_success": false,
+      "status": "abstained",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    },
+    {
+      "call_count": 1,
+      "confidence": null,
+      "error": null,
+      "example_id": "fw-0300-b",
+      "findings": [
+        {
+          "control_action": "no_semantic_exception",
+          "supporting_span_ids": [
+            "mandate",
+            "action"
+          ]
+        }
+      ],
+      "latency_seconds": 1.881976950011449,
+      "reasoning_retained": false,
+      "response_error_code": null,
+      "response_success": true,
+      "status": "valid",
+      "suppressed_call_count": 0,
+      "suppressed_clean_noop": false
+    }
+  ],
+  "runtime": {
+    "exceptions": 0,
+    "max_new_tokens": 512,
+    "max_rss_kib": 48176,
+    "max_seconds": 5.5481663109967485,
+    "mean_seconds": 2.4105611658415,
+    "p50_seconds": 2.1796968940179795,
+    "p95_seconds": 3.5241159849974792,
+    "platform": "Linux-7.2.4-zen2-1-zen-x86_64-with-glibc2.44",
+    "python": "3.14.7",
+    "setup_seconds": 0.5084006569813937,
+    "total_inference_seconds": 289.26733990098
+  },
+  "schema": "safr-firewall-needle-evaluation-v1",
+  "warnings": [
+    "Synthetic contrast benchmark only; not evidence of AML efficacy.",
+    "Reasoning text was not retained.",
+    "Local LoRA confidence is intentionally None and is not calibrated."
+  ]
+}

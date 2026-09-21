@@ -1,0 +1,87 @@
+{
+  "gates": {
+    "ood": {
+      "evidence_alignment": {
+        "checks": {
+          "citation_f1": true
+        },
+        "passed": true,
+        "status": "programmatic_non_exhaustive_targets_not_practitioner_validated",
+        "thresholds": {
+          "citation_f1": 0.7
+        }
+      },
+      "execution_candidate": {
+        "passed": false,
+        "status": "not_evaluable_without_reviewed_citations_and_external_validation"
+      },
+      "passed": true,
+      "semantic_candidate": {
+        "checks": {
+          "contrast_pair_accuracy": true,
+          "exact_set_accuracy": true,
+          "false_clear_rate": true,
+          "macro_f1": true,
+          "valid_output_rate": true
+        },
+        "passed": true,
+        "thresholds": {
+          "contrast_pair_accuracy": 0.6,
+          "exact_set_accuracy": 0.75,
+          "false_clear_rate_max": 0.15,
+          "macro_f1": 0.7,
+          "valid_output_rate": 1.0
+        }
+      }
+    },
+    "test": {
+      "evidence_alignment": {
+        "checks": {
+          "citation_f1": false
+        },
+        "passed": false,
+        "status": "programmatic_non_exhaustive_targets_not_practitioner_validated",
+        "thresholds": {
+          "citation_f1": 0.8
+        }
+      },
+      "execution_candidate": {
+        "passed": false,
+        "status": "not_evaluable_without_reviewed_citations_and_external_validation"
+      },
+      "passed": true,
+      "semantic_candidate": {
+        "checks": {
+          "contrast_pair_accuracy": true,
+          "exact_set_accuracy": true,
+          "false_clear_rate": true,
+          "macro_f1": true,
+          "valid_output_rate": true
+        },
+        "passed": true,
+        "thresholds": {
+          "contrast_pair_accuracy": 0.75,
+          "exact_set_accuracy": 0.85,
+          "false_clear_rate_max": 0.1,
+          "macro_f1": 0.8,
+          "valid_output_rate": 1.0
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "evidence_alignment": "Characterization against non-exhaustive programmatic citation targets; kept separate from semantic eligibility.",
+    "execution_candidate": "Unavailable until citations and behavior are independently reviewed on externally representative data.",
+    "semantic_candidate": "Moderate research gate over label discrimination and false-clear behavior."
+  },
+  "observed_at": "2026-09-21T15:53:07.694214Z",
+  "publish_allowed": false,
+  "schema": "safr-tiered-model-gate-assessment-v2",
+  "source_receipt": "research-evidence/safr-deepseek-flash-teacher.json",
+  "source_receipt_sha256": "895bfa753d947504937924eb2590d2479661cccc2b87d170cb4e5e69e1bc7275",
+  "teacher": {
+    "base_url_host": "api.deepseek.com",
+    "mutable_api_alias": true,
+    "requested_model": "deepseek-flash"
+  }
+}

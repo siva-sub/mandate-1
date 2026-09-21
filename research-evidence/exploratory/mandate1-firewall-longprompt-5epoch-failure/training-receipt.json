@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "mandate1-firewall-lora.safetensors": {
+      "bytes": 7906624,
+      "sha256": "458618ab984a2032e884b9b96778994ac2945c77987ee8d0118d014b50d008bc"
+    },
+    "mandate1-firewall-needle3-20l.cact": {
+      "bytes": 63437076,
+      "sha256": "9626c42dcc44ad54da8a4794bd2c829c422e76353d9b8bb176c258bd22c9da17"
+    },
+    "mandate1-firewall-needle3-8l.cact": {
+      "bytes": 27393236,
+      "sha256": "e7a08dbcdd3a88b88ea51724cdf5fd0d2cf549183cd173004d647945a5c4e53b"
+    }
+  },
+  "base": {
+    "checkpoint_file": "checkpoints/needle3.safetensors",
+    "checkpoint_sha256": "c234c70dccc7a9115e7c41ac2e41d3655fea3b85c245dd898b46179fb90c6c0c",
+    "repo": "Cactus-Compute/needle3",
+    "revision": "b274efcb211a9eef48c9a88da4b43bd569696a39",
+    "tokenizer_sha256": "97dfd5666620b19875deba9e55953d312364e7763bd08bee428b94f1b9491b25"
+  },
+  "completed_at": "2026-09-21T09:28:01.883741Z",
+  "data": {
+    "examples": 1080,
+    "max_tokens": 990,
+    "min_tokens": 889,
+    "path": "/content/safr/train.jsonl",
+    "sha256": "ed53fa66e834681babb439ea9d4547f2dcc358e83e34307d5dd69c6a83e20165"
+  },
+  "elapsed_seconds": 2445.6402854919434,
+  "environment": {
+    "cactus_needle": "3.0.4",
+    "compatibility_pin": "JAX/JAXLIB 0.8.1; 0.10 removed jax.checkpoint(concrete=...) and 0.11 also removed flax.core's get_opaque_trace_state path used by this training stack.",
+    "devices": [
+      "cuda:0"
+    ],
+    "jax": "0.8.1",
+    "jaxlib": "0.8.1",
+    "nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07",
+    "python": "3.13.15",
+    "telemetry_disabled": true
+  },
+  "schema": "mandate1-firewall-colab-train-v1",
+  "training": {
+    "batch_size": 8,
+    "epochs": 5,
+    "learning_rate": 0.0001,
+    "lora_alpha": 32,
+    "lora_rank": 16,
+    "max_len": 1024,
+    "seed": 94217,
+    "validation_note": "Fixed dev/calibration/test files are evaluated after export; random row split would leak order augmentations.",
+    "validation_split": 0
+  },
+  "warnings": [
+    "Training data is synthetic controlled contrast data, not institutional AML ground truth.",
+    "The local LoRA path does not fine-tune Needle's confidence head; runtime confidence must not be treated as calibrated.",
+    "Artifact export is not a deployment approval. The model remains shadow-only until fixed evaluation gates and local outcome calibration pass."
+  ]
+}
