@@ -6,7 +6,9 @@ I experiment across AI, tokenization and payments, and I am open to opportunitie
 
 ## The question
 
-The System-1 idea behind Jev made me ask: could a fast, bounded model do useful work in a framework like SAFR?
+When I read Kenneth See and the team's SAFR paper—**Safeguards for Agentic Finance at Runtime**—I thought: hey, why not try building something inspired by this?
+
+[Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) gave me a ChatGPT-like “aha” feeling about fast models that choose from a defined set of answers. Could that System-1 idea help check an agent's request before it acts? That comparison is my reaction, not a claim of equivalent capability. It makes me optimistic about further progress, rather than certain of a particular timeline.
 
 Not replace the rules. Not decide whether someone is laundering money. Something narrower: look at an agent's proposed action, its instruction and its evidence, and spot a semantic exception before code decides whether the action may proceed.
 
@@ -17,6 +19,8 @@ There is a difference between **dangerous words** and **a dangerous action**. A 
 I ran custom Needle 3 LoRA fine-tuning pilots and smaller GLiNER 2.5 fine-tuning experiments. They exposed issues with generalisation, formulation and evaluation. I then adapted Laya's typed-decision model and used teacher-diversified synthetic contrasts. The student improved, but its false clears remain too high to trust for releasing actions.
 
 The clearest proof came from a larger model: DeepSeek Flash with thinking disabled and a constrained JSON interface. It returned typed semantic findings; deterministic code checked authority, applied the disposition, wrote the decision record and released only an allowed synthetic read.
+
+DeepSeek's [official announcement](https://api-docs.deepseek.com/news/news260910) maps the `deepseek-flash` alias to V4.1-Flash. Its [published weights](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) are MIT-licensed and can be self-hosted with suitable hardware and software. My experiment used the hosted API; I have not tested a local DeepSeek deployment. Free-to-download weights do not mean free inference or an ordinary-laptop model.
 
 That end-to-end path worked on the authored demonstration cases. We can now show useful work completing, a contradiction being held, and failures that cannot turn into permission. The [experiment ledger](EXPERIMENTS.md) and original receipts show both the successful integration and the unsuccessful compact-model attempts.
 
