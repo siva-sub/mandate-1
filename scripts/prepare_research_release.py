@@ -43,6 +43,14 @@ def bundle(source: Path, destination: Path) -> None:
                     shutil.copyfileobj(incoming, outgoing)
 
 
+def kaggle_checksums(folder: Path, source: Path, prefix: str) -> None:
+    # Kaggle expands uploaded ZIPs into a directory named after the ZIP stem.
+    lines = [f'{sha(p)}  {prefix}/{p.relative_to(source).as_posix()}\n'
+             for p in sorted(source.rglob('*')) if p.is_file()]
+    lines += [f'{sha(folder/name)}  {name}\n' for name in ('README.md', 'LICENSE')]
+    (folder/'SHA256SUMS').write_text(''.join(lines))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True)
@@ -102,6 +110,7 @@ def main():
         if (base/name).exists():
             copy(base/name, github/'data/safr-semantic-firewall-v0.1'/name)
     copy(ROOT/'docs/DATASET_CARD.md', dataset/'README.md')
+    copy(ROOT/'docs/DATASET_CARD.md', github/'data/safr-semantic-firewall-v0.1-teacher-augmented/README.md')
     copy(ROOT/'DATA_LICENSE.txt', dataset/'LICENSE')
     copy(ROOT/'NOTICE', dataset/'NOTICE')
     for name in ('model.safetensors', 'rl_agent_config.json', 'encoder/config.json', 'tokenizer/tokenizer.json', 'tokenizer/tokenizer_config.json', 'training-receipt.json', 'ddp-training-state.json'):
@@ -126,7 +135,7 @@ def main():
     data_meta = {'id':'sivasub987/mandate-1-safr-data', 'title':'Mandate-1 SAFR Semantic Contrasts',
                  'subtitle':'Synthetic governance contrasts and transparent research provenance',
                  'description': (ROOT/'docs/DATASET_CARD.md').read_text().split('---',2)[-1].strip(),
-                 'licenses':[{'name':'CC-BY-4.0'}], 'keywords':['finance','nlp','classification','deep-learning','artificial-intelligence']}
+                 'licenses':[{'name':'CC-BY-4.0'}], 'keywords':['finance','nlp','classification']}
     (kgdata/'dataset-metadata.json').write_text(json.dumps(data_meta,indent=2)+'\n')
     model_meta = {'ownerSlug':'sivasub987','title':'Mandate-1 Laya','slug':'mandate-1-laya','isPrivate':False,
                   'subtitle':'Experimental shadow-only SAFR semantic classifier',
@@ -139,8 +148,8 @@ def main():
                 'trainingData':['https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data'],
                 'externalBaseModelUrl':'https://huggingface.co/convaiinnovations/laya-typed-decisions'}
     (kginstance/'model-instance-metadata.json').write_text(json.dumps(instance,indent=2)+'\n')
-    for folder in (kgdata, kginstance):
-        checksums(folder)
+    kaggle_checksums(kgdata, dataset, 'data-bundle')
+    kaggle_checksums(kginstance, model, 'model-bundle')
     print(json.dumps({'out':str(out), 'github_files':len(list(github.rglob('*'))), 'weights_sha256':expected,
                       'model_bundle_bytes':(kginstance/'model-bundle.zip').stat().st_size},indent=2))
 
