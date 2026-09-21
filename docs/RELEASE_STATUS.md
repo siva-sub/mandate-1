@@ -7,6 +7,8 @@ Verified on 2026-09-22 (Asia/Singapore). These are live links, not placeholders.
 | Interactive recorded demo | https://siva-sub.github.io/mandate-1/ |
 | Source and portfolio | https://github.com/siva-sub/mandate-1 |
 | Release downloads | https://github.com/siva-sub/mandate-1/releases/latest |
+| 34-second explainer, 1080p | https://github.com/siva-sub/mandate-1/releases/download/v0.2.0/brag.mp4 |
+| Full-resolution poster | https://github.com/siva-sub/mandate-1/releases/download/v0.2.0/brag.jpg |
 | Hugging Face dataset | https://huggingface.co/datasets/sivasub987/mandate-1-safr-data |
 | Hugging Face checkpoint | https://huggingface.co/sivasub987/mandate-1-laya |
 | Kaggle dataset | https://www.kaggle.com/datasets/sivasub987/mandate-1-safr-data |

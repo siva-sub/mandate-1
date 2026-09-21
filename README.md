@@ -14,7 +14,7 @@ I'm **Sivasubramanian Ramanathan (Siva)**, an independent consultant previously 
 
 The distinction is **dangerous actions versus dangerous words**. The goal is not another keyword blocklist: it is to interpret the relationship between the proposal, authority and runtime evidence—without letting a model grant itself permission. This is independent work, not endorsed by a former employer.
 
-[My motivation and portfolio](docs/PORTFOLIO.md) · [All experiments, including failures](docs/EXPERIMENTS.md) · [Verified release links and tags](docs/RELEASE_STATUS.md)
+[Watch the 34-second explainer](https://github.com/siva-sub/mandate-1/releases/download/v0.2.0/brag.mp4) · [My motivation and portfolio](docs/PORTFOLIO.md) · [All experiments, including failures](docs/EXPERIMENTS.md) · [Verified release links and tags](docs/RELEASE_STATUS.md)
 
 ## See the value first
 
